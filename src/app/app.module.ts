@@ -1,9 +1,11 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { EjesPage } from '../pages/ejes/ejes';
+import { EjePage } from '../pages/eje/eje';
 import { AccionesPage } from '../pages/acciones/acciones';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -17,6 +19,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     EjesPage,
+    EjePage,
     AccionesPage,
     HomePage,
     TabsPage,
@@ -24,12 +27,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     EjesPage,
+    EjePage,
     AccionesPage,
     HomePage,
     TabsPage,
