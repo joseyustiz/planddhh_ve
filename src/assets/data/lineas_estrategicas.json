@@ -1,0 +1,18 @@
+{
+  "lineasEstrategicas":[
+    {
+      "numero":1.1,
+      "titulo":"Eje 1 - Línea Estratégica 1",
+      "imagen":"",
+      "descripcion":"Promover la enseñanza sobre derechos humanos en los procesos de formación del Sistema Educativo, en todos sus niveles y modalidades",
+      "acciones":["1.1.1","1.1.2","1.1.3","1.1.4","1.1.5","1.1.5","1.1.6","1.1.7","1.1.8","1.1.9","1.1.10","1.1.11","1.1.12","1.1.13","1.1.14","1.1.15"]
+    },
+    {
+      "numero":1.2,
+      "titulo":"Eje 1 - Línea Estratégica 2",
+      "imagen":"",
+      "descripcion":"Impulsar el desarrollo de investigaciones académicas, estudios, espacios de reflexión y diálogo de saberes para la construcción de una cultura de derechos humanos, desde una visión emancipadora, crítica y alternativa",
+      "acciones":["1.2.1","1.2.2","1.2.3","1.2.4","1.2.5","1.2.5","1.2.6","1.2.7","1.1.8","1.2.9"]
+    }
+  ]
+}
