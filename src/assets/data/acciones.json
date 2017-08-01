@@ -852,119 +852,160 @@
     },
     {
       "numero":"5.1.3",
-      "descripcion":"Generar un espacio para el intercambio de experiencias y formación en materia de derechos humanos en el seno de la Alianza Bolivariana para los Pueblos de Nuestra América (ALBA)",
-      "filtros":["mppre","cndh","general","toda-poblacion"]
+      "descripcion":"Elaborar un manual para la incorporación de la perspectiva de derechos humanos, desde una visión emancipadora, crítica y alternativa, en el diseño de políticas públicas, asegurando su aplicación por los órganos y entes del Estado venezolano",
+      "filtros":["mppp","cndh","disposiciones-generales","toda-poblacion"]
     },
     {
-      "numero":"4.1.4",
-      "descripcion":"Continuar promoviendo una visión emancipadora, crítica y alternativa de los derechos humanos en las instituciones especializadas del Mercado Común del Sur (Mercosur)",
-      "filtros":["mppre","cndh","general","toda-poblacion"]
+      "numero":"5.1.4",
+      "descripcion":"Desarrollar un proceso de formación y capacitación en materia de planificación con enfoque de derechos humanos, destinado a las oficinas o direcciones de planificación de los órganos y entes del Estado",
+      "filtros":["mppp","cndh","disposiciones-generales","toda-poblacion"]
     },
     {
-      "numero":"4.1.5",
-      "descripcion":"Continuar impulsando el proceso de reforma del sistema de Naciones Unidas",
-      "filtros":["mppre","general","toda-poblacion"]
+      "numero":"5.1.5",
+      "descripcion":"Realizar un proceso de revisión de los planes y políticas de cada institución del Estado, a fin de identificar las acciones que garanticen el acceso y disfrute de los derechos humanos",
+      "filtros":["mppp","cndh","disposiciones-generales","toda-poblacion"]
     },
     {
-      "numero":"4.1.6",
-      "descripcion":"Impulsar la adopción de nuevos instrumentos internacionales para la protección de los derechos humanos, desde una visión emancipadora, crítica y alternativa, incluyendo normas vinculantes en torno a la responsabilidad de las empresas por la vulneración de los derechos humanos",
-      "filtros":["mppre","general","toda-poblacion"]
+      "numero":"5.1.6",
+      "descripcion":"Incorporar en los planes sectoriales, planes operativos anuales y demás políticas específicas de cada institución del Estado, el enfoque de derechos humanos, con especial atención a los sectores o grupos vulnerables",
+      "filtros":["mppp","disposiciones-generales","toda-poblacion"]
     },
     {
-      "numero":"4.1.7",
+      "numero":"5.1.7",
       "descripcion":"Fomentar la promoción y protección de los derechos humanos mediante el intercambio de experiencias con otros Estados, tanto a nivel bilateral como multilateral",
-      "filtros":["mppre","ddp","mp","cndh","general","toda-poblacion"]
+      "filtros":["mppp","ine","disposiciones-generales","toda-poblacion"]
     },
     {
-      "numero":"4.2.1",
-      "descripcion":"Mantener el liderazgo internacional en la promoción de los derechos a la solidaridad, la paz, el desarrollo, el orden inter- nacional democrático y equitativo, el respeto de los derechos de la naturaleza y la libre determinación de los pueblos",
-      "filtros":["mppre","general","toda-poblacion"]
+      "numero":"5.1.8",
+      "descripcion":"Reforzar los mecanismos creados para garantizar la publicación de datos de interés público en materia de derechos humanos, de forma actualizada y accesible, considerando para ello las tecnologías de información y comunicación",
+      "filtros":["mppp","ine","disposiciones-generales","toda-poblacion"]
     },
     {
-      "numero":"4.2.2",
-      "descripcion":"Compartir, mediante la cooperación internacional, las experiencias exitosas de Venezuela en programas y proyectos de lucha contra la pobreza",
-      "filtros":["mppre","vp-social","general","toda-poblacion"]
+      "numero":"5.1.9",
+      "descripcion":"Establecer un mecanismo para visibilizar la inversión pública en la niñez y la adolescencia",
+      "filtros":["mppp","idenna","cndh","disposiciones-generales","sociales","nna"]
     },
     {
-      "numero":"4.2.3",
-      "descripcion":"Ampliar la influencia del Estado en los foros multilaterales de derechos humanos para incidir en la agenda internacional y elevar los estándares de protección y respeto de los derechos humanos, desde una visión emancipadora, crítica y alternativa",
-      "filtros":["mppre","cndh","general","toda-poblacion"]
+      "numero":"5.1.10",
+      "descripcion":"Elaborar un instrumento que permita seguir fortaleciendo la implementación de los principios de interés superior y prioridad absoluta de niños, niñas y adolescentes en los procesos de planificación y ejecución de las políticas públicas",
+      "filtros":["mppp","idenna","disposiciones-generales","nna"]
     },
     {
-      "numero":"4.2.4",
-      "descripcion":"Continuar promoviendo una visión emancipadora, crítica y alternativa de los derechos humanos en las instituciones especializadas del Mercado Común del Sur (Mercosur)",
-      "filtros":["mppre","general","toda-poblacion"]
+      "numero":"5.2.1",
+      "descripcion":"Avanzar en la sanción y promulgación de leyes en materia de:<br>1.1. Protección de intereses colectivos o difusos.<br>1.2. Reparación y rehabilitación de las víctimas de violación a los derechos humanos.<br>1.3. Hábeas data.<br>1.4. Salud mental.<br>1.5. Alimentación saludable.<br>1.6. Parto y nacimiento humanizado.<br>1.7. Jurisdicción especial indígena.<br>1.8. Educación indígena.<br>1.9. Promoción y protección del derecho a la igualdad y no discriminación por orientación sexual, identidad de género o expresión de género.<br>1.10. Organización de los trabajadores y trabajadoras para su participación en el proceso social de trabajo.<br>1.11. Trabajadores y trabajadoras residenciales.<br>1.12. Prevención y sanción de la trata de personas.<br>1.13. Protección de los campesinos y campesinas contra el sicariato y demás formas de coacción en la lucha por la democratización de las tierras.",
+      "filtros":["an","disposiciones-generales","civiles","sociales","dd-indigenas","toda-poblacion","glbt","indigenas","discapacidad"]
     },
     {
-      "numero":"4.2.5",
-      "descripcion":"Potenciar la participación y presencia del Estado venezolano en las instancias de derechos humanos del Mercosur, especial- mente en la Reunión de Altas Autoridades de Derechos Humanos y el Instituto de Políticas Públicas en Derechos Humanos del Mercosur",
-      "filtros":["mppre","cndh","general","toda-poblacion"]
+      "numero":"5.2.2",
+      "descripcion":"Realizar una reforma de los siguientes instrumentos jurídicos a los fines de adecuarlos a la Constitución de la República Bolivariana de Venezuela y los instrumentos internacionales de derechos humanos:<br>2.1. Código Civil.<br>2.2. Código Penal.<br>2.3. Ley Orgánica contra la Discriminación Racial.<br>2.4. Ley para las Personas con Discapacidad",
+      "filtros":["an","disposiciones-generales","indigenas","afrovenezolanos","discapacidad"]
     },
     {
-      "numero":"4.2.6",
-      "descripcion":"Promover la incorporación de expertos en derechos humanos comprometidos con una visión emancipadora, crítica y alternativa, en las distintas instancias internacionales de derechos humanos existentes",
-      "filtros":["mppre","general","toda-poblacion"]
+      "numero":"5.2.3",
+      "descripcion":"Dictar instrumentos normativos de rango sublegal en las siguientes materias:<br>3.1 Respeto a los derechos humanos en los procesos de aprehensión, traslado, custodia e interrogatorio de personas por parte del Cuerpo de Policía Nacional Bolivariana, y demás cuerpos de policía estadales y municipales.<br>3.2. Derechos de los niños, niñas y adolescentes que se encuentren en situación de hospitalización.<br>3.3. Protección de la maternidad y la paternidad en el sistema educativo.<br>3.4. Garantía de los derechos humanos en los establecimientos privados de salud.<br>3.5. Disciplina y convivencia escolar.<br>3.6. Promoción y protección del ciclismo urbano.<br>3.7. Consulta previa e informada de actividades susceptibles de afectar a los pueblos y comunidades indígenas.<br>3.8. Derechos de personas trasplantadas, en espera de trasplantes y sometidas a diálisis.<br>3.9. Protección de las madres, padres, representantes o responsables de personas con gran discapacidad.",
+      "filtros":["mpp-relaciones-interiores","mpp-salud","mpp-educacion","mpp-transporte","mpp-indigenas","despacho-presidencia","idenna","civiles","sociales","culturales","economicos","nna","indigenas","discapacidad","privados-libertad"]
     },
     {
-      "numero":"4.2.7",
-      "descripcion":"Impulsar las iniciativas del Bloque de Defensores Públicos Oficiales del Mercosur (Blodepm) y de la Reunión Especializada de Defensores Públicos Oficiales del Mercosur (Redpo)",
-      "filtros":["mppre","ddp","mp","cndh","general","toda-poblacion"]
+      "numero":"5.2.4",
+      "descripcion":"Derogar o reformar las disposiciones de los Códigos de Policía y leyes estadales que vulneren derechos humanos para adecuarlas al orden constitucional",
+      "filtros":["ddp","tsj","cl","disposiciones-generales","toda-poblacion"]
     },
     {
-      "numero":"4.2.8",
-      "descripcion":"Impulsar la creación del Bloque de Defensores y Defensoras del Pueblo y Titulares de las Instituciones Nacionales de Derechos Humanos del Mercosur, y de la Reunión Especializada de Defensores y Defensoras del Pueblo y Titulares de las Instituciones Nacionales de Derechos Humanos del Mercosur",
-      "filtros":["mppre","ddp","general","toda-poblacion"]
+      "numero":"5.3.1",
+      "descripcion":"Aprobar e implementar los siguientes planes   sectoriales:<br>1.1. Plan Nacional para la Protección Integral de Niños, Niñas y Adolescentes.<br>1.2. Plan Nacional contra la Discriminación Racial.<br>1.3. Plan Nacional de Empresas y Derechos Humanos.<br>1.4. Plan Nacional de Identidad.<br>1.5. Plan Estratégico del Poder Judicial.<br>1.6. Estrategia nacional para combatir el cambio climático y sus efectos",
+      "filtros":["despacho-presidencia","mpp-relaciones-interiores","mpp-ecosocialismo","cne","tsj","indodir","idenna","cndh","disposiciones-generales","civiles","sociales","ambientales","nna"]
     },
     {
-      "numero":"4.3.1",
-      "descripcion":"Seguir cooperando con las Naciones Unidas y otras organizaciones internacionales presentes en la República Bolivariana de Venezuela para desarrollar el marco jurídico e institucional respecto a la promoción y protección de los derechos humanos",
-      "filtros":["mppre","mppp","ddp","tsj","dp","cndh","general","toda-poblacion"]
+      "numero":"5.3.2",
+      "descripcion":"Continuar implementando los siguientes planes sectoriales:<br>2.1. Plan de Igualdad y Equidad de Género «Mama Rosa» 2013-2019.<br>2.2. Misión Jóvenes de la Patria.<br>2.3. Plan Nacional para la protección de Derechos Sexuales y Reproductivos de las Mujeres 2014-2019",
+      "filtros":["mpp-mujer","mpp-juventud","disposiciones-generales","jovenes","mujeres","glbt"]
     },
     {
-      "numero":"4.3.2",
-      "descripcion":"Compartir, mediante la cooperación internacional, las experiencias exitosas de Venezuela en programas y proyectos de lucha contra la pobreza",
-      "filtros":["mppre","vp-social","general","toda-poblacion"]
+      "numero":"5.3.3",
+      "descripcion":"Reforzar la ejecución de los siguientes planes y políticas específicos:<br>3.1. Plan Nacional de Prevención de la Tortura y otros Tratos Crueles, Inhumanos o Degradantes.<br>3.2. Plan Nacional para la Respuesta Estratégica al VIH y al Sida.<br>3.3. Gran Misión «A Toda Vida Venezuela».",
+      "filtros":["mpp-salud","mpp-relaciones-interiores","ddp","disposiciones-generales","civiles","sociales","toda-poblacion", "personas-vih-sida"]
     },
     {
-      "numero":"4.3.3",
-      "descripcion":"Realizar un diagnóstico sobre la implementación de las recomendaciones resultantes del Examen Periódico Universal, y órganos de tratado de Naciones Unidas, que incluya consultas abiertas con órganos gubernamentales y de la sociedad",
-      "filtros":["mppre","cndh","general","toda-poblacion","defensores"]
+      "numero":"5.3.4",
+      "descripcion":"Continuar fortaleciendo las Misiones Sociales y las Grandes Misiones, así como la instalación de las Bases de Misiones",
+      "filtros":["vp-social","disposiciones-generales","toda-poblacion"]
     },
     {
-      "numero":"4.3.4",
-      "descripcion":"Establecer un mecanismo permanente para el seguimiento de la implementación de las recomendaciones realizadas al Estado venezolano por los órganos de derechos humanos de Naciones Unidas",
-      "filtros":["mppre","cndh","general","toda-poblacion"]
+      "numero":"5.3.5",
+      "descripcion":"Continuar reforzando las políticas y programas dirigidos a promover la accesibilidad y la continuidad en el sistema escolar",
+      "filtros":["mpp-educacion","culturales","toda-poblacion"]
     },
     {
-      "numero":"4.3.5",
-      "descripcion":"Difundir ampliamente los instrumentos internacionales sobre derechos humanos suscritos por la República Bolivariana de Venezuela y las recomendaciones surgidas del Sistema de Naciones Unidas, incluyendo su publicación en formatos accesibles, como braille y discos de audio",
-      "filtros":["mppre","conapdi","ddp","cndh","disposiciones-generales","discapacidad"]
+      "numero":"5.3.6",
+      "descripcion":"Implementar las recomendaciones resultantes del proceso de Consulta Nacional por la Calidad Educativa",
+      "filtros":["mpp-educacion","culturales","toda-poblacion"]
     },
     {
-      "numero":"4.3.6",
-      "descripcion":"Concientizar sobre el contenido de los derechos reconocidos en los tratados internacionales de derechos humanos, y la posibilidad de invocarlos ante los tribunales, especialmente entre los integrantes del sistema de justicia y otros actores encargados de su aplicación",
-      "filtros":["mppre","tsj","ddp","cndh","disposiciones-generales","toda-poblacion"]
+      "numero":"5.3.7",
+      "descripcion":"Potenciar las políticas de acceso a las telecomunicaciones y la informática, especialmente las dirigidas a la alfabetización tecnológica, utilización de la tecnología en el proceso educativo, soberanía tecnológica y democratización del acceso a internet",
+      "filtros":["mpp-ciencia-tecnologia","mpp-educacion","culturales","toda-poblacion"]
     },
     {
-      "numero":"4.3.7",
-      "descripcion":"Ratificar o adherirse a instrumentos internacionales sobre derechos humanos que resulten compatibles con la Constitución de la República Bolivariana de Venezuela",
-      "filtros":["mppre","an","general","toda-poblacion"]
+      "numero":"5.3.8",
+      "descripcion":"Asegurar la estricta aplicación del principio de juicio en libertad previsto en la Constitución de la República Bolivariana de Venezuela, favoreciendo las medidas alternativas a la privación de libertad",
+      "filtros":["mp","tsj","dp","civiles","toda-poblacion"]
     },
     {
-      "numero":"4.3.8",
-      "descripcion":"Difundir dentro de las instituciones del Estado y en el campo del Poder Popular, los compromisos y obligaciones contraídos por Venezuela con los organismos internacionales de derechos humanos, producto de tratados, convenios, acuerdos internacionales suscritos y ratificados por el Estado venezolano",
-      "filtros":["mppre","mpp-comunas","ddp","cndh","disposiciones-generales","toda-poblacion"]
+      "numero":"5.3.9",
+      "descripcion":"Implementar programas para la promoción de la convivencia escolar y comunitaria",
+      "filtros":["mpp-educacion","mpp-relaciones-interiores","mpp-comunas","culturales","culturales","toda-poblacion"]
     },
     {
-      "numero":"4.3.9",
-      "descripcion":"Implementar un programa de revisión de las reservas y declaraciones interpretativas interpuestas a los diversos tratados internacionales en materia de derechos humanos, en función del nuevo ordenamiento jurídico constitucional",
-      "filtros":["mppre","cndh","disposiciones-generales","toda-poblacion"]
+      "numero":"5.3.10",
+      "descripcion":"Reforzar las políticas para asegurar el acceso y cobertura universal de la salud, con especial énfasis en las poblaciones rurales e indígenas, incluyendo medidas para continuar incrementando la calidad y calidez de la atención en salud, así como el acceso a medicamentos y vacunas",
+      "filtros":["mpp-salud","sociales","dd-indigenas","indigenas"]
     },
     {
-      "numero":"4.3.10",
-      "descripcion":"Diseñar y poner en funcionamiento un plan de acción interinstitucional para fortalecer la protección y atención de las personas en necesidad de protección internacional, considerando para ello la Declaración y el Plan de Acción de Brasil",
-      "filtros":["mppre","mpp-relaciones-interiores","disposiciones-generales","nacionalidad","migrantes-refugiados"]
+      "numero":"5.3.11",
+      "descripcion":"Intensificar las políticas para asegurar el acceso al agua potable y el saneamiento",
+      "filtros":["mpp-ecosocialismo","sociales","toda-poblacion"]
+    },
+    {
+      "numero":"5.3.12",
+      "descripcion":"Intensificar los esfuerzos para reducir la mortalidad neonatal y materna, así como el embarazo temprano, especialmente aumentando el acceso a los servicios de salud sexual y reproductiva, y fortaleciendo la formación en materia de derechos sexuales y reproductivos",
+      "filtros":["mpp-salud","mpp-mujer","mpp-educacion","ddp","civiles","sociales","nna","mujeres"]
+    },
+    {
+      "numero":"5.3.13",
+      "descripcion":"Continuar reforzando las políticas y programas dirigidos a incrementar la producción nacional de alimentos y el pleno abastecimiento, en el marco de conquista de la seguridad y soberanía alimentaria, considerando los aportes de la agricultura familiar y urbana",
+      "filtros":["vp-economia","sociales","economicos","toda-poblacion"]
+    },
+    {
+      "numero":"5.3.14",
+      "descripcion":"Continuar con las políticas de lucha contra el latifundio urbano y la democratización de la tierra",
+      "filtros":["mpp-vivienda","mpp-agricola","sociales","toda-poblacion"]
+    },
+    {
+      "numero":"5.3.15",
+      "descripcion":"Fortalecer las estrategias de promoción de patrones alimentarios sanos, balanceados y sustentados en alimentos autóctonos",
+      "filtros":["mpp-alimentacion","mpp-salud","minci","inn","sociales","economicos","toda-poblacion"]
+    },
+    {
+      "numero":"5.3.16",
+      "descripcion":"Dar continuidad al proceso de demarcación del hábitat y tierras colectivas indígenas, para dar cumplimiento al mandato constitucional, tomando en cuenta la especificidad cultural de cada pueblo indígena",
+      "filtros":["mpp-indigenas","dd-indigenas","indigenas"]
+    },
+    {
+      "numero":"5.3.17",
+      "descripcion":"Fortalecer la política de apoyo a las emisoras de radio y televisión comunitarias, como medio para ampliar las oportunidades de ejercicio del derecho a la información y la democratización y uso del espectro radioeléctrico",
+      "filtros":["minci","conatel","civiles","sociales","toda-poblacion"]
+    },
+    {
+      "numero":"5.3.18",
+      "descripcion":"Acelerar el proceso de simplificación y automatización de trámites públicos, con el fin de avanzar hacia el Gobierno Electrónico y garantizar un mayor acceso y disfrute de los derechos humanos y un funcionamiento transparente y eficiente del Estado",
+      "filtros":["mpp-ciencia-tecnologia","autoridad-simplificacion","disposiciones-generales","toda-poblacion"]
+    },
+    {
+      "numero":"5.3.19",
+      "descripcion":"Profundizar el proceso de reorganización del Estado, a los fines de favorecer el surgimiento de un nuevo modelo de Gestión Socialista Bolivariano en el que cada servidora y servidor público se reconozca como corresponsable del respeto, garantía y disfrute de los derechos humanos de todos  y todas",
+      "filtros":["mpp-trabajo","disposiciones-generales","toda-poblacion"]
     }
+
 
   ]
 }

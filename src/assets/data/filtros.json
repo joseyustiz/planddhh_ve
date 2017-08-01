@@ -580,6 +580,20 @@
       "descripcion":"Consejo Federal de Gobierno",
       "slug":"cfg",
       "tipo":"INSTITUCION"
+    },
+    {
+      "id":83,
+      "nombre":"Jóvenes",
+      "descripcion":"Jóvenes",
+      "slug":"jovenes",
+      "tipo":"POBLACION"
+    },
+    {
+      "id":84,
+      "nombre":"INN",
+      "descripcion":"Instituto Nacional de Nutrición",
+      "slug":"inn",
+      "tipo":"INSTITUCION"
     }
   ]
 }
