@@ -86,3 +86,18 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+$color1: #3bbfce;
+$color2: #ff0000;
+$color3: #0000ff;
+
+
+.btnhome{
+  font-size: 2em;}
+  .btnhme1{background: $color1!important;}
+  .btnhme2{background: $color2!important;}
+  .btnhme3{background: $color3!important;}
+
+
+
+
