@@ -14,6 +14,12 @@
 
 
 <ion-content padding>
-
-
+    <ion-card ion-item *ngFor="let item of ejes">
+      <ion-card-header>
+        {{item.name}}
+      </ion-card-header>
+      <ion-card-content [innerHTML]="item.description">
+        <!--{{item.description}}-->
+      </ion-card-content>
+    </ion-card>
 </ion-content>
