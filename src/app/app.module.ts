@@ -14,6 +14,7 @@ import { ConstruccionPage } from '../pages/construccion/construccion';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {InvitarPage} from "../pages/invitar/invitar";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AccionesPage,
     HomePage,
     TabsPage,
-    ConstruccionPage
+    ConstruccionPage,
+    InvitarPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AccionesPage,
     HomePage,
     TabsPage,
-    ConstruccionPage
+    ConstruccionPage,
+    InvitarPage
   ],
   providers: [
     StatusBar,
