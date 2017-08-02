@@ -93,13 +93,11 @@ $ionicons-font-path: "../assets/fonts";
 
 
 .btnhome{
-  font-size: 0.9em !important; font-weight: normal !important; text-align: center!important; 
+  font-size: 0.9em !important; font-weight: normal !important; text-align: center!important; text-transform: capitalize !important; padding: 15px 0 !important; height: 123px!important; overflow: hidden!important;
 }
 .btnhome .button-inner{display: block!important;}
 .btnhome ion-icon{display: block!important;}
-
-  .button-md{text-transform: capitalize !important; padding: 15px 0 !important; height: 123px!important; overflow: hidden!important;}
-  .button-block{contain:inherit!important}
+.button-block{contain:inherit!important}
 
   
   
