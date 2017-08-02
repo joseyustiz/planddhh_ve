@@ -27,8 +27,8 @@
 
 @mixin makeIcon($arg, $val) {
   .ai-#{$arg}:before ,
-  .ion-ios-ai-#{$arg}:before ,
-  .ion-ios-ai-#{$arg}-outline:before ,
+  .ion-ios-#{$arg}:before ,
+  .ion-ios-#{$arg}-outline:before ,
   .ion-md-ai-#{$arg}:before ,
     .ion-md-#{$arg}:before ,
   .ion-md-ai-#{$arg}-outline:before  {
