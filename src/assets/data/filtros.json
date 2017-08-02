@@ -247,9 +247,9 @@
     },
     {
       "id":35,
-      "nombre":"IVSS",
+      "nombre":"Inpsasel",
       "descripcion":"Instituto Nacional de Prevención, Salud y Seguridad Laborales",
-      "slug":"ivss",
+      "slug":"inpsasel",
       "tipo":"INSTITUCION"
     },
     {
