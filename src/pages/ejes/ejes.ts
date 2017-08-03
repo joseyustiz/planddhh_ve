@@ -11,7 +11,7 @@ export class EjesPage {
   constructor(public navCtrl: NavController) {
   }
 
-  itemSeleccionado(event, ejeN) {
+  itemSeleccionado(ejeN) {
     console.log(ejeN);
     this.navCtrl.push(EjePage, {
         eje: ejeN
