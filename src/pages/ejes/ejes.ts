@@ -12,7 +12,7 @@ export class EjesPage {
   }
 
   itemSeleccionado(ejeN) {
-    console.log(ejeN);
+    console.log("eje # "+ ejeN);
     this.navCtrl.push(EjePage, {
         eje: ejeN
       }
