@@ -11,6 +11,9 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ConstruccionPage } from '../pages/construccion/construccion';
 import {InvitarPage} from "../pages/invitar/invitar";
+import {AccionPage} from "../pages/accion/accion";
+import {LineaPage} from "../pages/linea/linea";
+
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -25,7 +28,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     ConstruccionPage,
-    InvitarPage
+    InvitarPage,
+    AccionPage,
+    LineaPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     ConstruccionPage,
-    InvitarPage
+    InvitarPage,
+    AccionPage,
+    LineaPage
   ],
   providers: [
     StatusBar,
