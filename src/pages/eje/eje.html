@@ -7,19 +7,33 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Eje</ion-title>
+    <ion-title *ngFor="let item of eje">{{item.titulo}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-    <ion-card ion-item *ngFor="let item of ejes">
-      <ion-card-header>
-        {{item.name}}
-      </ion-card-header>
-      <ion-card-content [innerHTML]="item.description">
-        <!--{{item.description}}-->
-      </ion-card-content>
-    </ion-card>
+<ion-content padding *ngFor="let item of eje">
+  <div id="imagen">
+    <img src='{{item.imagen}}'/>
+  </div>
+  <div id="descripcion">
+    <p>{{item.descripcion}}</p>
+  </div>
+  <div id="objetivo">
+    <h2>Objetivo:</h2>
+    <p>{{item.objetivo}}</p>
+  </div>
+<div id="lineasEstrategicas">
+  <h2>Líneas estratégicas:</h2>
+  <ion-card *ngFor="let linea of item.lineasEstrategicas" (click)="lineaSeleccionada(linea)">
+    <ion-card-header>
+      {{linea.titulo}}
+    </ion-card-header>
+    <ion-card-content>
+      <!--<p ng-bind-html=""></p>-->
+     {{linea.descripcion}}
+    </ion-card-content>
+  </ion-card>
+</div>
 </ion-content>
