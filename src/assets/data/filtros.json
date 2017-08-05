@@ -2,8 +2,8 @@
   "filtros": [
     {
       "id":0,
-      "nombre":"Toda la Población",
-      "descripcion":"Toda la Población",
+      "nombre":"Población en General",
+      "descripcion":"Población en General",
       "slug":"toda-poblacion",
       "tipo":"POBLACION"
     },
@@ -493,7 +493,7 @@
     {
       "id":70,
       "nombre":"General",
-      "descripcion":"General",
+      "descripcion":"Derechos en General",
       "slug":"general",
       "tipo":"DERECHO"
     },

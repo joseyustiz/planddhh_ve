@@ -3,26 +3,380 @@
     {
       "numero": 1,
       "titulo": "Eje 1",
-      "descripcion":"Construcción de una cultura emancipadora de Derechos Humanos",
+      "descripcion": "Construcción de una cultura emancipadora de derechos humanos.",
       "objetivo": "Promover una cultura de respeto y protección de los derechos humanos en el Estado y en todos los sectores de la sociedad, desde una perspectiva emancipadora, crítica y alternativa, a fin eliminar los prejuicios y las prácticas que contribuyen a su amenaza y violación.",
-      "imagen":"",
-      "lineasEstrategicas":[1.1,1.2,1.3]
+      "imagen": "../../assets/img/plan/plan-p31-eje1-optimizado.jpg",
+      "lineasEstrategicas": [
+        {
+          "numero": 1.1,
+          "titulo": "Eje 1 - Línea Estratégica 1",
+          "imagen": "",
+          "descripcion": "Promover la enseñanza sobre derechos humanos en los procesos de formación del Sistema Educativo, en todos sus niveles y modalidades",
+          "acciones": [
+            "1.1.1",
+            "1.1.2",
+            "1.1.3",
+            "1.1.4",
+            "1.1.5",
+            "1.1.6",
+            "1.1.7",
+            "1.1.8",
+            "1.1.9",
+            "1.1.10",
+            "1.1.11",
+            "1.1.12",
+            "1.1.13",
+            "1.1.14",
+            "1.1.15"
+          ]
+        },
+        {
+          "numero": 1.2,
+          "titulo": "Eje 1 - Línea Estratégica 2",
+          "imagen": "",
+          "descripcion": "Impulsar el desarrollo de investigaciones académicas, estudios, espacios de reflexión y diálogo de saberes para la construcción de una cultura de derechos humanos, desde una visión emancipadora, crítica y alternativa",
+          "acciones": [
+            "1.2.1",
+            "1.2.2",
+            "1.2.3",
+            "1.2.4",
+            "1.2.5",
+            "1.2.6",
+            "1.2.7",
+            "1.2.8",
+            "1.2.9"
+          ]
+        },
+        {
+          "numero": 1.3,
+          "titulo": "Eje 1 - Línea Estratégica 3",
+          "imagen": "",
+          "descripcion": "Desarrollar estrategias de promoción y divulgación de los derechos humanos, a través de espacios de educación no formal y demás estrategias de abordaje y difusión masiva",
+          "acciones": [
+            "1.3.1",
+            "1.3.2",
+            "1.3.3",
+            "1.3.4",
+            "1.3.5",
+            "1.3.6",
+            "1.3.7",
+            "1.3.8",
+            "1.3.9",
+            "1.3.10",
+            "1.3.11",
+            "1.3.12",
+            "1.3.13",
+            "1.3.14",
+            "1.3.15",
+            "1.3.16",
+            "1.3.17",
+            "1.3.18",
+            "1.3.19",
+            "1.3.20",
+            "1.3.21",
+            "1.3.22"
+          ]
+        }
+      ]
     },
     {
       "numero": 2,
       "titulo": "Eje 2",
-      "descripcion":"Construcción de una cultura emancipadora de Derechos Humanos",
-      "objetivo": "Promover una cultura de respeto y protección de los derechos humanos en el Estado y en todos los sectores de la sociedad, desde una perspectiva emancipadora, crítica y alternativa, a fin eliminar los prejuicios y las prácticas que contribuyen a su amenaza y violación.",
-      "imagen":"",
-      "lineasEstrategicas":[1.1,1.2,1.3]
+      "descripcion": "Fortalecimiento de la institucionalidad para la garantía de los derechos de todas y todos.",
+      "objetivo": "Contribuir al fortalecimiento institucional de los órganos y entes del Estado, a los fines de incrementar su eficiencia y eficacia en la promoción, protección, respeto y garantía de los derechos humanos.",
+      "imagen": "../../assets/img/plan/plan-p39-eje2-optimizado.jpg",
+      "lineasEstrategicas": [
+        {
+          "numero": 2.1,
+          "titulo": "Eje 2 - Línea Estratégica 1",
+          "imagen": "",
+          "descripcion": "Incrementar el acceso de la población a los órganos y entes del Estado encargados de la promoción y protección de los derechos humanos, así como la capacidad de respuesta institucional frente a las demandas de la población",
+          "acciones": [
+            "2.1.1",
+            "2.1.2",
+            "2.1.3",
+            "2.1.4",
+            "2.1.5",
+            "2.1.6",
+            "2.1.7",
+            "1.4.8",
+            "2.1.9",
+            "2.1.10",
+            "2.1.11",
+            "2.1.12",
+            "2.1.13",
+            "2.1.14",
+            "2.1.15",
+            "2.1.16",
+            "2.1.17",
+            "2.1.18",
+            "2.1.19",
+            "2.1.20",
+            "2.1.21",
+            "2.1.22",
+            "2.1.23",
+            "2.1.24",
+            "2.1.25",
+            "2.1.26",
+            "2.1.27",
+            "2.1.28",
+            "2.1.29",
+            "2.1.30",
+            "2.1.31",
+            "2.1.32",
+            "2.1.33",
+            "2.1.34"
+          ]
+        },
+        {
+          "numero": 2.2,
+          "titulo": "Eje 2 - Línea Estratégica 2",
+          "imagen": "",
+          "descripcion": "Generar nuevos mecanismos para el respeto y la garantía de los derechos humanos en el seno del Estado venezolano, y en todo sector vinculado con la prestación de servicios directamente asociados a estos derechos",
+          "acciones": [
+            "2.2.1",
+            "2.2.2",
+            "2.2.3",
+            "2.2.4",
+            "2.2.5",
+            "2.2.6",
+            "2.2.7",
+            "2.2.8",
+            "2.2.9",
+            "2.2.10",
+            "2.2.11",
+            "2.2.12",
+            "2.2.13",
+            "2.2.14",
+            "2.2.15",
+            "2.2.16",
+            "2.2.17",
+            "2.2.18",
+            "2.2.19",
+            "2.2.20"
+          ]
+        },
+        {
+          "numero": 2.3,
+          "titulo": "Eje 2 - Línea Estratégica 3",
+          "imagen": "",
+          "descripcion": "Fortalecer las capacidades de los servidores públicos y las servidoras públicas del Estado venezolano en materia de promoción, protección y garantía de los derechos humanos, en el marco de la nueva ética socialista",
+          "acciones": [
+            "2.3.1",
+            "2.3.2",
+            "2.3.3",
+            "2.3.4",
+            "2.3.5",
+            "2.3.6",
+            "2.3.7",
+            "2.3.8",
+            "2.3.9",
+            "2.3.10",
+            "2.3.11",
+            "2.3.12",
+            "2.3.13",
+            "2.3.14",
+            "2.3.15",
+            "2.3.16",
+            "2.3.17"
+          ]
+        }
+      ]
     },
     {
       "numero": 3,
-      "titulo": "Eje 2",
-      "descripcion":"Construcción de una cultura emancipadora de Derechos Humanos",
-      "objetivo": "Promover una cultura de respeto y protección de los derechos humanos en el Estado y en todos los sectores de la sociedad, desde una perspectiva emancipadora, crítica y alternativa, a fin eliminar los prejuicios y las prácticas que contribuyen a su amenaza y violación.",
-      "imagen":"",
-      "lineasEstrategicas":[1.1,1.2,1.3]
+      "titulo": "Eje 3",
+      "descripcion": "Participación protagónica del pueblo para el disfrute pleno de los derechos humanos.",
+      "objetivo": "Acompañar al Poder Popular en los procesos de organización y acción para la promoción y defensa de los derechos humanos, en el marco de la corresponsabilidad social y la democracia participativa y protagónica.",
+      "imagen": "../../assets/img/plan/plan-p49-eje3-optimizado.jpg",
+      "lineasEstrategicas": [
+        {
+          "numero": 3.1,
+          "titulo": "Eje 3 - Línea Estratégica 1",
+          "imagen": "",
+          "descripcion": "Acompañar al Poder Popular en los procesos de organización y acción para la promoción y defensa de los derechos humanos, en el marco de la corresponsabilidad social y la democracia participativa y protagónica.",
+          "acciones": [
+            "3.1.1",
+            "3.1.2",
+            "3.1.3",
+            "3.1.4",
+            "3.1.5",
+            "3.1.6",
+            "3.1.7",
+            "3.1.8",
+            "3.1.9",
+            "3.1.10",
+            "3.1.11",
+            "3.1.12"
+          ]
+        },
+        {
+          "numero": 3.2,
+          "titulo": "Eje 3 - Línea Estratégica 2",
+          "imagen": "",
+          "descripcion": "Impulsar el fortalecimiento de las organizaciones y movimientos de derechos humanos.",
+          "acciones": [
+            "3.2.1",
+            "3.2.2",
+            "3.2.3",
+            "3.2.4",
+            "3.2.5",
+            "3.2.6",
+            "3.2.7"
+          ]
+        },
+        {
+          "numero": 3.3,
+          "titulo": "Eje 3 - Línea Estratégica 3",
+          "imagen": "",
+          "descripcion": "Propiciar mecanismos de cooperación, intercambio y solidaridad internacional con movimientos sociales en materia de promoción y protección de los derechos humanos.",
+          "acciones": [
+            "3.3.1",
+            "3.3.2",
+            "3.3.3",
+            "3.3.4",
+            "3.3.5"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "titulo": "Eje 4",
+      "descripcion": "Relación con los sistemas y organismos internacionales de derechos humanos, desde una visión transformadora.",
+      "objetivo": "Promover relaciones de cooperación e intercambio con los sistemas y organismos internacionales de derechos humanos, basadas en los principios de subsidiariedad, imparcialidad, objetividad y no selectividad.",
+      "imagen": "../../assets/img/plan/plan-p55-eje4-optimizado.jpg",
+      "lineasEstrategicas": [
+        {
+          "numero": 4.1,
+          "titulo": "Eje 4 - Línea Estratégica 1",
+          "imagen": "",
+          "descripcion": "Promover el surgimiento de instancias internacionales de derechos humanos comprometidas con una visión emancipadora, crítica y alternativa.",
+          "acciones": [
+            "4.1.1",
+            "4.1.2",
+            "4.1.3",
+            "4.1.4",
+            "4.1.5",
+            "4.1.6",
+            "4.1.7"
+          ]
+        },
+        {
+          "numero": 4.2,
+          "titulo": "Eje 4 - Línea Estratégica 2",
+          "imagen": "",
+          "descripcion": "Fortalecer la presencia del Estado en los organismos internacionales de derechos humanos, derivados de instrumentos válidamente suscritos y ratificados por la República.",
+          "acciones": [
+            "4.2.1",
+            "4.2.2",
+            "4.2.3",
+            "4.2.4",
+            "4.2.5",
+            "4.2.6",
+            "4.2.7",
+            "4.2.8"
+          ]
+        },
+        {
+          "numero": 4.3,
+          "titulo": "Eje 4 - Línea Estratégica 3",
+          "imagen": "",
+          "descripcion": "Promover el cumplimiento de las obligaciones internacionales del Estado venezolano en materia de derechos humanos, dentro del marco de la Constitución de la República Bolivariana de Venezuela.",
+          "acciones": [
+            "4.3.1",
+            "4.3.2",
+            "4.3.3",
+            "4.3.4",
+            "4.3.5",
+            "4.3.6",
+            "4.3.7",
+            "4.3.8",
+            "4.3.9",
+            "4.3.10"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "titulo": "Eje 5",
+      "descripcion": "Profundización del enfoque de derechos humanos en la legislación, la política y la acción del Estado venezolano.",
+      "objetivo": "Fortalecer el enfoque de derechos humanos en el marco normativo interno y las políticas públicas desarrolladas por el Estado venezolano, a partir de la fuerza transformadora de la Constitución de la República Bolivariana de Venezuela.",
+      "imagen": "../../assets/img/plan/plan-p64-consulta-fanb-optimizada.jpg",
+      "lineasEstrategicas": [
+        {
+          "numero": 5.1,
+          "titulo": "Eje 5 - Línea Estratégica 1",
+          "imagen": "",
+          "descripcion": "Reforzar el enfoque de derechos humanos en el proceso de formulación, implementación y seguimiento de las políticas públicas del Estado venezolano.",
+          "acciones": [
+            "5.1.1",
+            "5.1.2",
+            "5.1.3",
+            "5.1.4",
+            "5.1.5",
+            "5.1.6",
+            "5.1.7",
+            "5.1.8",
+            "5.1.9",
+            "5.1.10"
+          ]
+        },
+        {
+          "numero": 5.2,
+          "titulo": "Eje 5 - Línea Estratégica 2",
+          "imagen": "",
+          "descripcion": "Adecuar el marco normativo interno a las disposiciones sobre derechos humanos contenidas en la Constitución de la República Bolivariana de Venezuela.",
+          "acciones": [
+            "5.2.1",
+            "5.2.2",
+            "5.2.3",
+            "5.2.4"
+          ]
+        },
+        {
+          "numero": 5.3,
+          "titulo": "Eje 5 - Línea Estratégica 3",
+          "imagen": "",
+          "descripcion": "Desarrollar planes y políticas dirigidas a garantizar el disfrute pleno de los derechos humanos y la conquista de la suprema felicidad social.",
+          "acciones": [
+            "5.3.1",
+            "5.3.2",
+            "5.3.3",
+            "5.3.4",
+            "5.3.5",
+            "5.3.6",
+            "5.3.7",
+            "5.3.8",
+            "5.3.9",
+            "5.3.10",
+            "5.3.11",
+            "5.3.12",
+            "5.3.13",
+            "5.3.14",
+            "5.3.15",
+            "5.3.16",
+            "5.3.17",
+            "5.3.18",
+            "5.3.19",
+            "5.3.20",
+            "5.3.21",
+            "5.3.22",
+            "5.3.23",
+            "5.3.24",
+            "5.3.25",
+            "5.3.26",
+            "5.3.27",
+            "5.3.28",
+            "5.3.29",
+            "5.3.30",
+            "5.3.31",
+            "5.3.32",
+            "5.3.33"
+          ]
+        }
+      ]
     }
   ]
 }
