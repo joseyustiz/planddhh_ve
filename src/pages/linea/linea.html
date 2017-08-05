@@ -17,20 +17,20 @@
   </div>
   <div id="accionesProgramaticas">
     <h2>Acciones Programáticas:</h2>
-    <ion-card *ngFor="let accion of acciones" (click)="accionSeleccionada(accion)">
-      <ion-card-content>
+    <ion-card *ngFor="let accion of acciones" >
+      <ion-card-content (click)="accionSeleccionada(accion)">
         {{accion.numero}}.- {{accion.descripcion}}
       </ion-card-content>
       <ion-row no-padding>
         <ion-col>
-          <button ion-button clear small color="danger" icon-start>
-            <ion-icon name='star'></ion-icon>
+          <button ion-button clear small color="danger" icon-start (click)="accionSeleccionada(accion)">
+            <ion-icon name='more'></ion-icon>
             Ver Más
           </button>
         </ion-col>
         <ion-col text-right>
           <button ion-button clear small color="danger" icon-start>
-            <ion-icon name='share-alt'></ion-icon>
+            <ion-icon name='share'></ion-icon>
             Compartir
           </button>
         </ion-col>
