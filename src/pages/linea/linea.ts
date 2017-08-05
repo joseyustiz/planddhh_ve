@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
+import 'rxjs/add/operator/map'; //Reactive Extensions Library for JavaScript
+import {AccionPage} from '../accion/accion';
 
 /**
  * Generated class for the LineaPage page.
@@ -13,12 +16,37 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'linea.html',
 })
 export class LineaPage {
+  linea:any;
+  acciones:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private http: Http,public navCtrl: NavController, public navParams: NavParams) {
+    this.linea=navParams.get("linea");
+    let numero:String;
+
+    this.http.get('assets/data/acciones.json')
+      .map(res => {
+        return res.json().acciones.filter((item) => {
+          return item.numero.indexOf(this.linea.numero+".") >= 0
+        })
+      })
+      .subscribe(
+        data => {
+          this.acciones = data;
+        },
+        err => console.log("error es " + err), // error
+        () => console.log('Lectura de acciones completadas ' + this.acciones.toString()) // complete
+      );
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LineaPage');
   }
-
+  accionSeleccionada(accion){
+    this.navCtrl.push(AccionPage, {
+        accion: accion
+      }
+    );
+    console.log(accion);
+  }
 }

@@ -7,12 +7,25 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Acción</ion-title>
+    <ion-title>Acción {{accion.numero}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <div id="descripcion">
+    <h2>
+      Descipción:
+    </h2>
+    {{accion.descripcion}}
+  </div>
+  <div id="etiquetas">
+    <strong>Etiquetas:</strong>
+    <p *ngFor="let etiqueta of etiquetas">
+      {{etiqueta.descripcion}}
+    </p>
+
+  </div>
 
 </ion-content>
