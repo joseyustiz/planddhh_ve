@@ -21,8 +21,6 @@ export class LineaPage {
 
   constructor(private http: Http,public navCtrl: NavController, public navParams: NavParams) {
     this.linea=navParams.get("linea");
-    let numero:String;
-
     this.http.get('assets/data/acciones.json')
       .map(res => {
         return res.json().acciones.filter((item) => {
