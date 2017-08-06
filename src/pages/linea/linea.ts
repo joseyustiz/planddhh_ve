@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController, NavParams} from 'ionic-angular';
 import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
 import 'rxjs/add/operator/map'; //Reactive Extensions Library for JavaScript
 import {AccionPage} from '../accion/accion';
+import {SocialSharing} from '@ionic-native/social-sharing';
 
 /**
  * Generated class for the LineaPage page.
@@ -16,15 +17,16 @@ import {AccionPage} from '../accion/accion';
   templateUrl: 'linea.html',
 })
 export class LineaPage {
-  linea:any;
-  acciones:any;
+  linea: any;
+  acciones: any;
 
-  constructor(private http: Http,public navCtrl: NavController, public navParams: NavParams) {
-    this.linea=navParams.get("linea");
+  constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams,
+              private socialSharing: SocialSharing) {
+    this.linea = navParams.get("linea");
     this.http.get('assets/data/acciones.json')
       .map(res => {
         return res.json().acciones.filter((item) => {
-          return item.numero.indexOf(this.linea.numero+".") >= 0
+          return item.numero.indexOf(this.linea.numero + ".") >= 0
         })
       })
       .subscribe(
@@ -40,11 +42,21 @@ export class LineaPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LineaPage');
   }
-  accionSeleccionada(accion){
+
+  accionSeleccionada(accion) {
     this.navCtrl.push(AccionPage, {
         accion: accion
       }
     );
     console.log(accion);
+  }
+
+  compartirAccion(accion, titulo, archivo, url) {
+    this.socialSharing.share(accion,titulo,archivo,url)
+      .then(() => {
+      console.log("shareSheetShare: Success");
+    }).catch(() => {
+      console.error("shareSheetShare: failed");
+    });
   }
 }

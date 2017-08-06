@@ -13,7 +13,7 @@ import { ConstruccionPage } from '../pages/construccion/construccion';
 import {InvitarPage} from "../pages/invitar/invitar";
 import {AccionPage} from "../pages/accion/accion";
 import {LineaPage} from "../pages/linea/linea";
-
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -53,6 +53,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
