@@ -18,8 +18,9 @@
     <h2>
       Descipción:
     </h2>
-    {{accion.descripcion}}
+    <p [innerHtml]="accion.descripcion"></p>
   </div>
+
   <div id="etiquetas">
     <ion-icon name='pricetags'>Etiquetas:</ion-icon>
     <p *ngFor="let etiqueta of etiquetas">

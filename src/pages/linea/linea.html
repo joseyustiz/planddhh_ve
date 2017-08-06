@@ -18,8 +18,9 @@
   <div id="accionesProgramaticas">
     <h2>Acciones Programáticas:</h2>
     <ion-card *ngFor="let accion of acciones" >
+      <ion-card-header>Acción {{accion.numero}}</ion-card-header>
       <ion-card-content (click)="accionSeleccionada(accion)">
-        {{accion.numero}}.- {{accion.descripcion}}
+        <p [innerHtml]="accion.descripcion"></p>
       </ion-card-content>
       <ion-row no-padding>
         <ion-col>
