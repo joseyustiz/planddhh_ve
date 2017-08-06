@@ -20,7 +20,7 @@
     <ion-card *ngFor="let accion of acciones">
       <ion-card-header>Acción {{accion.numero}}</ion-card-header>
       <ion-card-content (click)="accionSeleccionada(accion)">
-        <p [innerHtml]="accion.descripcion"></p>
+        <p [innerHtml]="accion.descripcion" #descripcionAccion></p>
       </ion-card-content>
       <ion-row no-padding>
         <ion-col>
@@ -29,7 +29,7 @@
             Ver Más
           </button>
         </ion-col>
-        <ion-col text-right (click)="compartirAccion(linea.descripcion,linea.titulo,null,'consejoderechoshumanos.gob.ve/wp-content/.../plan_Nacional_Derechos_Humanos.pdf')">
+        <ion-col text-right (click)="compartirAccion(descripcionAccion.innerText,accion.numero,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
           <button ion-button clear small color="danger" icon-start>
             <ion-icon name='share'></ion-icon>
             Compartir
