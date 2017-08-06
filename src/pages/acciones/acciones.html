@@ -1,17 +1,64 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Acciones
+      Acciones Programáticas
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-searchbar placeholder="escribe para filtrar..." (ionInput)="filtrarAcciones($event)" (ionClear)="borradoFiltro($event)"></ion-searchbar>
+
+  <div *ngIf="!filtrado">
+  <ion-card *ngFor="let accion of acciones">
+      <ion-card-header>Acción {{accion.numero}}</ion-card-header>
+      <ion-card-content (click)="accionSeleccionada(accion)">
+        <p [innerHtml]="accion.descripcion" #descripcionAccion></p>
+      </ion-card-content>
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="danger" icon-start (click)="accionSeleccionada(accion)">
+            <ion-icon name='more'></ion-icon>
+            Ver Más
+          </button>
+        </ion-col>
+        <ion-col text-right (click)="compartirAccion(descripcionAccion,accion.numero,null,'consejoderechoshumanos.gob.ve/wp-content/.../plan_Nacional_Derechos_Humanos.pdf')">
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='share'></ion-icon>
+            Compartir
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+
+
+
+  <div *ngIf="filtrado">
+    <ion-card *ngFor="let accion of accionesFiltradas">
+      <ion-card-header>Acción {{accion.numero}}</ion-card-header>
+      <ion-card-content (click)="accionSeleccionada(accion)">
+        <p [innerHtml]="accion.descripcion" #descripcionAccion></p>
+      </ion-card-content>
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="danger" icon-start (click)="accionSeleccionada(accion)">
+            <ion-icon name='more'></ion-icon>
+            Ver Más
+          </button>
+        </ion-col>
+        <ion-col text-right (click)="compartirAccion(descripcionAccion,accion.numero,null,'consejoderechoshumanos.gob.ve/wp-content/.../plan_Nacional_Derechos_Humanos.pdf')">
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='share'></ion-icon>
+            Compartir
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
 </ion-content>
