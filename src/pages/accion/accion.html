@@ -22,10 +22,10 @@
   </div>
 
   <div id="etiquetas">
-    <ion-icon name='pricetags'>Etiquetas:</ion-icon>
-    <p *ngFor="let etiqueta of etiquetas">
-      {{etiqueta.nombre}}
-    </p>
+      <ion-icon name='pricetags'>Etiquetas:</ion-icon>
+    <ion-chip *ngFor="let etiqueta of etiquetas">
+      <ion-label> {{etiqueta.nombre}}</ion-label>
+    </ion-chip>
 
   </div>
 
