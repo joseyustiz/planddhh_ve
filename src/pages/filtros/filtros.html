@@ -5,14 +5,55 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Filtros</ion-title>
+    <ion-title >
+      Filtros
+    </ion-title>
+    <ion-buttons left>
+      <button ion-button (click)="cerrar()">Cerrar</button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button (click)="limpiar()">Limpiar</button>
+    </ion-buttons>
   </ion-navbar>
 
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="filtros">
+      <ion-segment-button value="instituciones">
+        Instituciones
+      </ion-segment-button>
+      <ion-segment-button value="población">
+        Población
+      </ion-segment-button>
+      <ion-segment-button value="derechos">
+        Derechos
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
-
 <ion-content padding>
+  <div [ngSwitch]="filtros">
+    <ion-list *ngSwitchCase="'instituciones'">
+      <ion-item *ngFor="let filtro of filtrosInstituciones">
+        <ion-label>{{filtro.nombre}}</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'población'">
+      <ion-item *ngFor="let filtro of filtrosPoblaciones">
+        <ion-label>{{filtro.nombre}}</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'derechos'">
+      <ion-item *ngFor="let filtro of filtrosDerechos">
+        <ion-label>{{filtro.nombre}}</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </div>
 
 </ion-content>

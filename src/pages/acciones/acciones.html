@@ -3,7 +3,13 @@
     <ion-title>
       Acciones Programáticas
     </ion-title>
-    <ion-buttons end>
+    <ion-buttons left (click)="limpiarFiltros($event)">
+      <button ion-button icon-only>
+        <!--<ion-icon name="funnel"></ion-icon>-->
+        Limpiar
+      </button>
+    </ion-buttons>
+    <ion-buttons end (click)="presentarFiltros($event)">
       <button ion-button icon-only>
         <ion-icon name="funnel"></ion-icon>
       </button>
@@ -12,7 +18,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar placeholder="escribe para filtrar..." (ionInput)="filtrarAcciones($event)" (ionClear)="borradoFiltro($event)"></ion-searchbar>
+  <ion-searchbar placeholder="Escribe para filtrar..." (ionInput)="filtrarAcciones($event)" (ionClear)="borradoFiltroTexto($event)"></ion-searchbar>
+  <div padding id="etiquetas">
+  <ion-chip *ngFor="let tag of tags.filtros" #elem [attr.id]="tag.id">
+    <ion-label>{{tag.nombre}}</ion-label>
+    <button ion-button clear color="light" (click)="borrarFiltro(elem)">
+      <ion-icon name="close-circle"></ion-icon>
+    </button>
+  </ion-chip>
+  </div>
 
   <div *ngIf="!filtrado">
   <ion-card *ngFor="let accion of acciones">

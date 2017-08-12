@@ -13,6 +13,7 @@ import { ConstruccionPage } from '../pages/construccion/construccion';
 import {InvitarPage} from "../pages/invitar/invitar";
 import {AccionPage} from "../pages/accion/accion";
 import {LineaPage} from "../pages/linea/linea";
+import {FiltrosPage} from "../pages/filtros/filtros";
 import { SocialSharing } from '@ionic-native/social-sharing';
 
 
@@ -30,7 +31,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ConstruccionPage,
     InvitarPage,
     AccionPage,
-    LineaPage
+    LineaPage,
+    FiltrosPage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ConstruccionPage,
     InvitarPage,
     AccionPage,
-    LineaPage
+    LineaPage,
+    FiltrosPage
   ],
   providers: [
     StatusBar,

@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {NavController, NavParams, ModalController} from 'ionic-angular';
 import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
 import {AccionPage} from '../accion/accion';
 import {SocialSharing} from '@ionic-native/social-sharing';
+import {FiltrosPage} from "../filtros/filtros";
 
 @Component({
   selector: 'page-contact',
@@ -12,11 +13,31 @@ export class AccionesPage {
   acciones: any;
   filtrado:boolean;
   accionesFiltradas:any;
+  tags:any; //almacena los tags seleccionado como filtros
 
   constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams,
-              private socialSharing: SocialSharing) {
+              private socialSharing: SocialSharing,public modalCtrl: ModalController) {
     this.cargarAcciones();
     this.filtrado=false;
+    //TODO remover los tags de pruebas
+    this.tags= {
+      "filtros": [
+        {
+          "id": 0,
+          "nombre": "Población en General",
+          "descripcion": "Población en General",
+          "slug": "toda-poblacion",
+          "tipo": "POBLACION"
+        },
+        {
+          "id":1,
+          "nombre":"Niñ@s y Adolescentes",
+          "descripcion":"Niños, Niñas y Adolescentes",
+          "slug":"nna",
+          "tipo":"POBLACION"
+        }
+      ]
+    }
   }
 
   cargarAcciones() {
@@ -52,25 +73,34 @@ export class AccionesPage {
   }
 
   filtrarAcciones(ev) {
-   // this.cargarAcciones();
 
     var val = ev.target.value;
     if (val && val.trim() != '') {
       console.log("filtando contenido");
       this.accionesFiltradas = this.acciones
         .filter((item) => {
-          // return (item.numero.toLowerCase().indexOf(val.toLowerCase()) >= 0);
           return (item.descripcion.toLowerCase().indexOf(val.toLowerCase()) >= 0);
         })
       this.filtrado=true;
       // console.log('Acciones filtradas ' + this.acciones)
     }else {
       this.filtrado=false;
-
     }
   }
-  borradoFiltro(ev){
+  borradoFiltroTexto(ev){
     this.filtrado=false;
     console.log('Filtro borrado' );
   }
+
+  presentarFiltros(ev){
+    let filtrosModal = this.modalCtrl.create(FiltrosPage,this.tags);
+    filtrosModal.present();
+  }
+
+  borrarFiltro(el:Element){
+    // ev.scrElement.remove();
+    el.remove();
+    //TODO remover el filtro de la lista de acciones
+  }
+  limpiarFiltros(ev){}
 }
