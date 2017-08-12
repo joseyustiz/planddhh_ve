@@ -5,6 +5,7 @@ import { AccionesPage } from '../acciones/acciones';
 import { HomePage } from '../home/home';
 import { ConstruccionPage } from '../construccion/construccion';
 import { InvitarPage } from '../invitar/invitar';
+import { FiltrosPage } from '../filtros/filtros';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class TabsPage {
   tab3Root = AccionesPage;
   tab4Root = ConstruccionPage;
   tab5Root = InvitarPage;
+  tab6Root = FiltrosPage;
 
 
 
