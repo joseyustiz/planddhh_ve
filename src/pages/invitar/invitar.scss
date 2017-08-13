@@ -1,5 +1,8 @@
 page-invitar {
-  ion-icon:before {
-    font-size: 8rem !important;
-  }
+  .btnhome ion-icon:before {
+        font-size: 6rem !important;
+    }
+    .btnhome  ion-icon {
+        margin-bottom: 9px;
+    }
 }
