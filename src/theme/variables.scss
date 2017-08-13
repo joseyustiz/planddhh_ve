@@ -119,6 +119,19 @@ $ionicons-font-path: "../assets/fonts";
   .back-button .button-inner{color: $color5;}
   .toolbar-ios ion-title{padding: 0 14px 1px!important;}
   ion-title.logotop{top: 10px!important;}
+
+  .tabtitle{padding: 0; height: inherit!important;width: inherit!important;}
+  .tabtitle .toolbar-title{font-size: 1.3rem !important; color: #fff !important;  font-weight: normal; padding: 4px 40px 4px 17px;width: inherit!important; height: inherit!important;
+  -webkit-border-top-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  border-top-right-radius: 20px;
+  }
+.tabtitle.toolbar-ios ion-title{width: inherit!important; height: inherit!important;}
+ .tabtitle.color1 ion-title{background-color: $color1;}
+ .tabtitle.color2 ion-title{background-color: $color2;}
+ .tabtitle.color3 ion-title{background-color: $color3;}
+ .tabtitle.color4 ion-title{background-color: $color4;}
+
   
 
 
