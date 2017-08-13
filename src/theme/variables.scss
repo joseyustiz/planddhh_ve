@@ -33,13 +33,23 @@ $app-direction: ltr;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
+$color1:    #3faa84;
+$color2:  #72a0d5;
+$color3:     #66cc99;
+$color4:      #a8bdd1;
+$color5:       #586a93;
+
+
 $colors: (
-  primary:    #3ea983,
-  secondary:  #719fd5,
-  danger:     #70baac,
-  light:      #f4f4f4,
-  dark:       #222
+  primary:    $color1,
+  secondary:  $color2,
+  danger:     $color3,
+  light:      $color4,
+  dark:       $color5
 );
+
+
+
 
 
 // App iOS Variables
@@ -93,13 +103,23 @@ $ionicons-font-path: "../assets/fonts";
 
 
 .btnhome{
-  font-size: 0.9em !important; font-weight: normal !important; text-align: center!important; text-transform: capitalize !important; padding: 15px 0 !important; height: 123px!important; overflow: hidden!important;
+  font-size: 0.9em !important; font-weight: normal !important; text-align: center!important; text-transform: capitalize !important; padding: 23px 0 !important; height: 126px!important; overflow: hidden!important;
 }
 .btnhome .button-inner{display: block!important;}
 .btnhome ion-icon{display: block!important;}
 .button-block{contain:inherit!important}
 
+ .text-center .toolbar-title{text-align: center!important;} 
+ .tabbar{background: $color5!important;}
+ .tab-button-text{color: #fff;}
+ .tab-button-icon:before{color: #fff;}
+ .toolbar-title{text-align: left!important;}
+ .back-button-icon-ios { font-size: 2rem!important;}
+  .bar-button-ios {font-size: 1.5rem!important;}
+  .back-button .button-inner{color: $color5;}
+  .toolbar-ios ion-title{padding: 0 14px 1px!important;}
+  ion-title.logotop{top: 10px!important;}
   
-  
+
 
 
