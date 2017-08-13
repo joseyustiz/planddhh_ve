@@ -6,15 +6,16 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title class="logotop text-center"><img src="../assets/img/logo-DDHH.svg" class="imgSVG" alt="imagen SVG" title="imagen SVG" width="160" /></ion-title>
+    <ion-title class="logotop text-center"><img src="../assets/img/logo-DDHH.svg" class="imgSVG" alt="imagen SVG"
+                                                title="imagen SVG" width="160"/></ion-title>
   </ion-navbar>
-    
-    <ion-toolbar>
+
+  <ion-toolbar>
     <ion-title>Filtros</ion-title>
   </ion-toolbar>
 
-    <ion-toolbar>
-      <ion-buttons end>
+  <ion-toolbar>
+    <ion-buttons end>
       <button ion-button (click)="cerrar()">
         <!-- Advanced: explicity set the icon for each platform -->
         <ion-icon ios="ios-close" md="md-close"></ion-icon>
@@ -26,12 +27,11 @@
         <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
       </button>
     </ion-buttons>
-    </ion-toolbar>
-    
+  </ion-toolbar>
 
 
   <ion-toolbar no-border-top>
-    <ion-segment [(ngModel)]="filtros">
+    <ion-segment [(ngModel)]="prestagna">
       <ion-segment-button value="instituciones">
         Instituciones
       </ion-segment-button>
@@ -46,25 +46,29 @@
 </ion-header>
 
 <ion-content padding>
-  <div [ngSwitch]="filtros">
+  <div [ngSwitch]="prestagna">
     <ion-list *ngSwitchCase="'instituciones'">
       <ion-item *ngFor="let filtro of filtrosInstituciones">
         <ion-label>{{filtro.nombre}}</ion-label>
-        <ion-toggle></ion-toggle>
+        <ion-toggle [checked]="isSeleccionado(filtro.slug)"
+                    (ionChange)="cambioToggle(filtro)"></ion-toggle>
       </ion-item>
     </ion-list>
 
     <ion-list *ngSwitchCase="'población'">
       <ion-item *ngFor="let filtro of filtrosPoblaciones">
         <ion-label>{{filtro.nombre}}</ion-label>
-        <ion-toggle></ion-toggle>
+        <ion-toggle [checked]="isSeleccionado(filtro.slug)"
+                    (ionChange)="cambioToggle(filtro)">
+        </ion-toggle>
       </ion-item>
     </ion-list>
 
     <ion-list *ngSwitchCase="'derechos'">
       <ion-item *ngFor="let filtro of filtrosDerechos">
         <ion-label>{{filtro.nombre}}</ion-label>
-        <ion-toggle></ion-toggle>
+        <ion-toggle [checked]="isSeleccionado(filtro.slug)"
+                    (ionChange)="cambioToggle(filtro)"></ion-toggle>
       </ion-item>
     </ion-list>
   </div>

@@ -1,7 +1,7 @@
-
 <ion-header>
-<ion-navbar>
-    <ion-title class="logotop text-center"><img src="../assets/img/logo-DDHH.svg" class="imgSVG" alt="imagen SVG" title="imagen SVG" width="160" /></ion-title>
+  <ion-navbar>
+    <ion-title class="logotop text-center"><img src="../assets/img/logo-DDHH.svg" class="imgSVG" alt="imagen SVG"
+                                                title="imagen SVG" width="160"/></ion-title>
   </ion-navbar>
 
   <ion-toolbar>
@@ -12,7 +12,7 @@
       <button ion-button icon-only>
         <!-- Advanced: explicity set the icon for each platform -->
         <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
-              
+
       </button>
     </ion-buttons>
     <ion-buttons end (click)="presentarFiltros($event)">
@@ -20,24 +20,25 @@
         <ion-icon name="funnel"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-toolbar>  
+  </ion-toolbar>
 </ion-header>
 
 
-
 <ion-content>
-  <ion-searchbar placeholder="Escribe para filtrar..." (ionInput)="filtrarAcciones($event)" (ionClear)="borradoFiltroTexto($event)"></ion-searchbar>
-  <div padding id="etiquetas">
-  <ion-chip *ngFor="let tag of tags.filtros" #elem [attr.id]="tag.id">
-    <ion-label>{{tag.nombre}}</ion-label>
-    <button ion-button clear color="light" (click)="borrarFiltro(elem)">
-      <ion-icon name="close-circle"></ion-icon>
-    </button>
-  </ion-chip>
+  <ion-searchbar [(ngModel)]="filtroTexto" placeholder="Escribe para filtrar por texto..." (ionInput)="filtrarAcciones($event)"
+                 (ionClear)="borradoFiltroTexto($event)"></ion-searchbar>
+  <!--Valor de contadorTags = {{contadorTags}}-->
+  <div padding id="etiquetas" *ngIf="contadorTags > 0">
+    <ion-chip *ngFor="let tag of tags" #elem [attr.id]="tag.id">
+      <ion-label>{{tag.nombre}}</ion-label>
+      <button ion-button clear color="light" (click)="borrarFiltro(elem,tag.slug)">
+        <ion-icon name="close-circle"></ion-icon>
+      </button>
+    </ion-chip>
   </div>
 
   <div *ngIf="!filtrado">
-  <ion-card *ngFor="let accion of acciones">
+    <ion-card *ngFor="let accion of acciones">
       <ion-card-header>Acción {{accion.numero}}</ion-card-header>
       <ion-card-content (click)="accionSeleccionada(accion)">
         <p [innerHtml]="accion.descripcion" #descripcionAccion></p>
@@ -49,7 +50,8 @@
             Ver Más
           </button>
         </ion-col>
-        <ion-col text-right (click)="compartirAccion(descripcionAccion.innerText,accion.numero,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
+        <ion-col text-right
+                 (click)="compartirAccion(descripcionAccion.innerText,accion.numero,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
           <button ion-button clear small color="danger" icon-start>
             <ion-icon name='share'></ion-icon>
             Compartir
@@ -58,7 +60,6 @@
       </ion-row>
     </ion-card>
   </div>
-
 
 
   <div *ngIf="filtrado">
@@ -74,7 +75,8 @@
             Ver Más
           </button>
         </ion-col>
-        <ion-col text-right (click)="compartirAccion(descripcionAccion.innerText,accion.numero,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
+        <ion-col text-right
+                 (click)="compartirAccion(descripcionAccion.innerText,accion.numero,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
           <button ion-button clear small color="danger" icon-start>
             <ion-icon name='share'></ion-icon>
             Compartir
