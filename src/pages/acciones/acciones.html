@@ -1,12 +1,18 @@
+
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Acciones Programáticas
-    </ion-title>
-    <ion-buttons left (click)="limpiarFiltros($event)">
+<ion-navbar>
+    <ion-title class="logotop text-center"><img src="../assets/img/logo-DDHH.svg" class="imgSVG" alt="imagen SVG" title="imagen SVG" width="160" /></ion-title>
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-title>Acciones Programáticas</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons end (click)="limpiarFiltros($event)">
       <button ion-button icon-only>
-        <!--<ion-icon name="funnel"></ion-icon>-->
-        Limpiar
+        <!-- Advanced: explicity set the icon for each platform -->
+        <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+              
       </button>
     </ion-buttons>
     <ion-buttons end (click)="presentarFiltros($event)">
@@ -14,8 +20,10 @@
         <ion-icon name="funnel"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-toolbar>  
 </ion-header>
+
+
 
 <ion-content>
   <ion-searchbar placeholder="Escribe para filtrar..." (ionInput)="filtrarAcciones($event)" (ionClear)="borradoFiltroTexto($event)"></ion-searchbar>
