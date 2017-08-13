@@ -5,595 +5,680 @@
       "nombre":"Población en General",
       "descripcion":"Población en General",
       "slug":"toda-poblacion",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":1,
       "nombre":"Niñ@s y Adolescentes",
       "descripcion":"Niños, Niñas y Adolescentes",
       "slug":"nna",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":2,
       "nombre":"Adult@s Mayores",
       "descripcion":"Adultos y Adultas Mayores",
       "slug":"adultos-mayores",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":3,
       "nombre":"Mujeres",
       "descripcion":"Mujeres",
       "slug":"mujeres",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":4,
       "nombre":"GLBT",
       "descripcion":"Gays, Lesbianas, Bisexuales y Transexuales",
       "slug":"glbt",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":5,
       "nombre":"Indígenas",
       "descripcion":"Indígenas",
       "slug":"indigenas",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":6,
       "nombre":"Afrovenezolan@s",
       "descripcion":"Afrovenezolanos y Afrovenezolanas",
       "slug":"afrovenezolanos",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":7,
       "nombre":"Personas con Discapacidad",
       "descripcion":"Personas con Discapacidad",
       "slug":"discapacidad",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":8,
       "nombre":"Migrantes y Refugiad@s",
       "descripcion":"Migrantes, Refugiados y Refugiadas",
       "slug":"migrantes-refugiados",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":9,
       "nombre":"Defensor@s de DDHH",
       "descripcion":"Defensores y Defensoras de Derechos Humanos",
       "slug":"defensores",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":10,
       "nombre":"Privad@s de Libertad",
       "descripcion":"Personas Privadas de Libertad",
       "slug":"privados-libertad",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":11,
       "nombre":"Personas con VIH/SIDA",
       "descripcion":"Personas con VIH/SIDA",
       "slug":"personas-vih-sida",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":12,
       "nombre":"Alcaldías",
       "descripcion":"Alcaldías",
       "slug":"alcaldias",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":13,
       "nombre":"Asamblea Nacional",
       "descripcion":"Asamblea Nacional",
       "slug":"an",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":14,
       "nombre":"Aut. Úni. de Simpl. de Trámites y Permisos",
       "descripcion":"Autoridad Única de Simplificación de Trámites y Permisos",
         "slug":"autoridad-simplificacion",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":15,
       "nombre":"Conatel",
       "descripcion":"Comisión Nacional de Telecomunicaciones",
       "slug":"conatel",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":16,
       "nombre":"Comisión por la Justicia y la Verdad",
       "descripcion":"Comisión por la Justicia y la Verdad",
       "slug":"comision-verdad",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":17,
       "nombre":"Concejos Municipales",
       "descripcion":"Concejos Municipales",
       "slug":"cm",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":18,
       "nombre":"CNDH",
       "descripcion":"Consejo Nacional de Derechos Humanos",
       "slug":"cndh",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":19,
       "nombre":"CNE",
       "descripcion":"Consejo Nacional Electoral",
       "slug":"cne",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":20,
       "nombre":"Conapdi",
       "descripcion":"Consejo Nacional para las Personas con Discapacidad",
       "slug":"conapdi",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":21,
       "nombre":"Consejos Legislativos",
       "descripcion":"Consejos Legislativos",
       "slug":"cl",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":22,
       "nombre":"CGR",
       "descripcion":"Contraloría General de la República",
       "slug":"cgr",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":23,
       "nombre":"CICPC",
       "descripcion":"Cuerpo de Investigaciones, Científicas, Penales y Criminalística",
       "slug":"cicpc",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":24,
       "nombre":"PNB y otras policías",
       "descripcion":"Cuerpo de Policía Nacional Bolivariana, y demás cuerpos de policía estadales y municipales",
       "slug":"pnb-otras",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":25,
       "nombre":"DdP",
       "descripcion":"Defensoría del Pueblo",
       "slug":"ddp",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":26,
       "nombre":"Fonacit",
       "descripcion":"Fondo Nacional de Ciencia, Tecnología e Innovación",
       "slug":"fonacit",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":27,
       "nombre":"Misión Saber y Trabajo",
       "descripcion":"Fundación Gran Misión Saber y Trabajo",
       "slug":"saber-trabajo",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":28,
       "nombre":"Misión José Gregorio Hernández",
       "descripcion":"Fundación Misión José Gregorio Hernández",
       "slug":"jose-gregorio",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":29,
       "nombre":"Misión Negra Hipólita",
       "descripcion":"Fundación Misión Negra Hipólita",
       "slug":"negra-hipolita",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":30,
       "nombre":"Gobernaciones",
       "descripcion":"Gobernaciones",
       "slug":"gobernaciones",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":31,
       "nombre":"Idenna",
       "descripcion":"Instituto Autónomo Consejo Nacional de Derechos de Niños, Niñas y Adolescentes",
       "slug":"idenna",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":32,
       "nombre":"Incodir",
       "descripcion":"Instituto Nacional contra la Discriminación Racial",
       "slug":"indodir",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":33,
       "nombre":"Inces",
       "descripcion":"Instituto Nacional de Capacitación y Educación Socialista",
       "slug":"inces",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":34,
       "nombre":"INE",
       "descripcion":"Instituto Nacional de Estadística",
       "slug":"ine",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":35,
       "nombre":"Inpsasel",
       "descripcion":"Instituto Nacional de Prevención, Salud y Seguridad Laborales",
       "slug":"inpsasel",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":36,
       "nombre":"Inass",
       "descripcion":"Instituto Nacional de Servicios Sociales",
       "slug":"inass",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":37,
       "nombre":"MPPP",
       "descripcion":"Ministerio del Poder Popular para la Planificación",
       "slug":"mppp",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":38,
       "nombre":"MPP Despacho de la Presidencia",
       "descripcion":"Ministerio del Poder Popular del Despacho de la Presidencia y Seguimiento de la Gestión de Gobierno",
       "slug":"despacho-presidencia",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":39,
       "nombre":"MPP Ecosocialismo y Aguas",
       "descripcion":"Ministerio del Poder Popular para Ecosocialismo y Aguas",
       "slug":"mpp-ecosocialismo",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":40,
       "nombre":"MPP Educación Universitaria, Ciencia y Tecnología",
       "descripcion":"Ministerio del Poder Popular para Educación Universitaria, Ciencia y Tecnología",
       "slug":"mpp-ciencia-tecnologia",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":41,
       "nombre":"MPP Proceso Social de Trabajo",
       "descripcion":"Ministerio del Poder Popular para el Proceso Social de Trabajo",
       "slug":"mpp-trabajo",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":42,
       "nombre":"MPP Servicio Penitenciario",
       "descripcion":"Ministerio del Poder Popular para el Servicio Penitenciario",
       "slug":"mpp-serv-penitenciario",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":43,
       "nombre":"MPP Alimentación",
       "descripcion":"Ministerio del Poder Popular para la Alimentación",
       "slug":"mpp-alimentacion",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":44,
       "nombre":"MINCI",
       "descripcion":"Ministerio del Poder Popular para la Comunicación y la Información",
       "slug":"minci",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":45,
       "nombre":"MPP Cultura",
       "descripcion":"Ministerio del Poder Popular para la Cultura",
       "slug":"mpp-cultura",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":46,
       "nombre":"MPP Defensa",
       "descripcion":"Ministerio del Poder Popular para la Defensa",
       "slug":"mpp-defensa",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":47,
       "nombre":"MPP Educación",
       "descripcion":"Ministerio del Poder Popular para la Educación",
       "slug":"mpp-educacion",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":48,
       "nombre":"MPP Juventud y Deporte",
       "descripcion":"Ministerio del Poder Popular para la Juventud y el Deporte",
       "slug":"mpp-juventud",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":49,
       "nombre":"MPP Mujer e Igualdad de Género",
       "descripcion":"Ministerio del Poder Popular para la Mujer y la Igualdad de Género",
       "slug":"mpp-mujer",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":50,
       "nombre":"MPP Producción Agrícolas y Tierras",
       "descripcion":"Ministerio del Poder Popular para la Producción Agrícolas y Tierras",
       "slug":"mpp-agricola",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":51,
       "nombre":"MPP Salud",
       "descripcion":"Ministerio del Poder Popular para la Salud",
       "slug":"mpp-salud",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":52,
       "nombre":"MPP Comunas y Movimientos Sociales",
       "descripcion":"Ministerio del Poder Popular para las Comunas y los Movimientos Sociales",
       "slug":"mpp-comunas",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":53,
       "nombre":"MPP Pueblos Indígenas",
       "descripcion":"Ministerio del Poder Popular para los Pueblos Indígenas",
       "slug":"mpp-indigenas",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":54,
       "nombre":"MPP Relaciones Exteriores",
       "descripcion":"Ministerio del Poder Popular para Relaciones Exteriores",
       "slug":"mppre",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":55,
       "nombre":"MPP Relaciones Interiores, Justicia y Paz",
       "descripcion":"Ministerio del Poder Popular para Relaciones Interiores, Justicia y Paz",
       "slug":"mpp-relaciones-interiores",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":56,
       "nombre":"MPP Transporte y Obras Públicas",
       "descripcion":"Ministerio del Poder Popular para Transporte y Obras Públicas",
       "slug":"mpp-transporte",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":57,
       "nombre":"MPP Vivienda y Hábitat",
       "descripcion":"Ministerio del Poder Popular para Vivienda y Hábitat",
       "slug":"mpp-vivienda",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":58,
       "nombre":"Ministerio Público",
       "descripcion":"Ministerio Público",
       "slug":"mp",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":59,
       "nombre":"PGR",
       "descripcion":"Procuraduría General de la República",
       "slug":"pgr",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":60,
       "nombre":"Saime",
       "descripcion":"Servicio Administrativo de Identificación, Migración y Extranjería",
       "slug":"saime",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":61,
       "nombre":"Sunavi",
       "descripcion":"Superintendencia Nacional de Vivienda",
       "slug":"sunavi",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":62,
       "nombre":"Sundde",
       "descripcion":"Superintendencia Nacional para la Defensa de los Derechos Socioeconómicos",
       "slug":"sundde",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":63,
       "nombre":"TSJ",
       "descripcion":"Tribunal Supremo de Justicia",
       "slug":"tsj",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":64,
       "nombre":"UBT 'Jesús Rivero'",
       "descripcion":"Universidad Bolivariana de Trabajadores Jesús Rivero",
       "slug":"ubtjr",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":65,
       "nombre":"UNES",
       "descripcion":"Universidad Nacional Experimental de la Seguridad",
       "slug":"unes",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":66,
       "nombre":"Universidades",
       "descripcion":"Universidades",
       "slug":"universidades",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":67,
       "nombre":"Vicepresidencia de la República",
       "descripcion":"Vicepresidencia de la República",
       "slug":"vicepresidencia",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":68,
       "nombre":"VP Economía",
       "descripcion":"Vicepresidencia Sectorial de Economía",
       "slug":"vp-economia",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":69,
       "nombre":"VP Social",
       "descripcion":"Vicepresidencia Sectorial para el Desarrollo Social y la Revolución de las Misiones",
       "slug":"vp-social",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":70,
       "nombre":"General",
       "descripcion":"Derechos en General",
       "slug":"general",
-      "tipo":"DERECHO"
+      "tipo":"DERECHO",
+      "seleccionado":false
     },
     {
       "id":71,
       "nombre":"Disposiciones Generales",
       "descripcion":"Capítulo I Disposiciones Generales",
       "slug":"disposiciones-generales",
-      "tipo":"DERECHO"
+      "tipo":"DERECHO",
+      "seleccionado":false
     },
     {
       "id":72,
       "nombre":"Nacionalidad y Ciudadanía",
       "descripcion":"Capítulo II De la Nacionalidad y la Ciudadanía",
       "slug":"nacionalidad",
-      "tipo":"DERECHO"
+      "tipo":"DERECHO",
+      "seleccionado":false
     },
     {
       "id":73,
       "nombre":"Derechos Civiles",
       "descripcion":"Capítulo III De los Derechos Civiles",
       "slug":"civiles",
-      "tipo":"DERECHO"
+      "tipo":"DERECHO",
+      "seleccionado":false
     },
     {
       "id":74,
       "nombre":"Derechos Políticos",
       "descripcion":"Capítulo IV De los Derechos Políticos y del Referendo Popular",
       "slug":"politicos",
-      "tipo":"DERECHO"
+      "tipo":"DERECHO",
+      "seleccionado":false
     },
     {
       "id":75,
       "nombre":"Derechos Sociales",
       "descripcion":"Capítulo V De los Derechos Sociales y de las Familias",
       "slug":"sociales",
-      "tipo":"DERECHO"
+      "tipo":"DERECHO",
+      "seleccionado":false
     },
     {
       "id":76,
       "nombre":"Derechos Culturales",
       "descripcion":"Capítulo VI De los Derechos Culturales y Educativos",
       "slug":"culturales",
-      "tipo":"DERECHO"
+      "tipo":"DERECHO",
+      "seleccionado":false
     },
     {
       "id":77,
       "nombre":"Derechos Económicos",
       "descripcion":"Capítulo VII De los Derechos Económicos",
       "slug":"economicos",
-      "tipo":"DERECHO"
+      "tipo":"DERECHO",
+      "seleccionado":false
     },
     {
       "id":78,
       "nombre":"Derechos de los Pueblos Indígenas",
       "descripcion":"Capítulo VIII De los Derechos de los Pueblos Indígenas",
       "slug":"dd-indigenas",
-      "tipo":"DERECHO"
+      "tipo":"DERECHO",
+      "seleccionado":false
     },
     {
       "id":79,
       "nombre":"Derechos Ambientales",
       "descripcion":"Capítulo IX De los Derechos Ambientales",
       "slug":"ambientales",
-      "tipo":"DERECHO"
+      "tipo":"DERECHO",
+      "seleccionado":false
     },
     {
       "id":80,
       "nombre":"Defensa Pública",
       "descripcion":"Defensa Pública",
       "slug":"dp",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":81,
       "nombre":"SENAMECF",
       "descripcion":"Servicio Nacional de Medicina y Ciencias Forenses",
       "slug":"senamecf",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":82,
       "nombre":"CFG",
       "descripcion":"Consejo Federal de Gobierno",
       "slug":"cfg",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     },
     {
       "id":83,
       "nombre":"Jóvenes",
       "descripcion":"Jóvenes",
       "slug":"jovenes",
-      "tipo":"POBLACION"
+      "tipo":"POBLACION",
+      "seleccionado":false
     },
     {
       "id":84,
       "nombre":"INN",
       "descripcion":"Instituto Nacional de Nutrición",
       "slug":"inn",
-      "tipo":"INSTITUCION"
+      "tipo":"INSTITUCION",
+      "seleccionado":false
     }
   ]
 }
