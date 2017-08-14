@@ -11,7 +11,7 @@ import * as _ from "lodash";
   templateUrl: 'acciones.html'
 })
 export class AccionesPage {
-  acciones: any;
+  acciones: any = undefined;
   filtrado: boolean;
   accionesFiltradas: any;
   tags: any; //almacena los tags seleccionado como filtros
@@ -60,6 +60,7 @@ export class AccionesPage {
   }
 
   filtrarAcciones(ev) {
+    console.log("filtro de texto tiene contenido ='"+this.filtroTexto+"'");
     var soloTags=this.tags.map((item)=>{return item.slug});
     // var val = ev.target.value;
     // var val = this.filtroTexto;
@@ -85,9 +86,10 @@ export class AccionesPage {
     else {
       if (this.contadorTags === 0) {
         this.filtrado = false;
-        //this.accionesFiltradas=this.acciones;
+        this.accionesFiltradas=this.acciones;
         // ningun filtro
         console.log("se metió por ningun filtro");
+        console.log("Contenido de acciones"+this.acciones);
       } else {
         // filtrando por solo filtros
         console.log("se metió solo filtros");
@@ -139,5 +141,10 @@ export class AccionesPage {
     this.tags=[];
     this.contadorTags=0;
     this.filtrado=false;
+  }
+  itentificarAccion(accion){
+    console.log("llamada identificarAccion = " + accion.id);
+    return accion.id;
+
   }
 }

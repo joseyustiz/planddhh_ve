@@ -21,12 +21,17 @@
       </button>
     </ion-buttons>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="filtroTexto" placeholder="Escribe para filtrar por texto..."
+                   (ionInput)="filtrarAcciones($event)"
+                   (ionClear)="borradoFiltroTexto($event)">
+    </ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
-  <ion-searchbar [(ngModel)]="filtroTexto" placeholder="Escribe para filtrar por texto..." (ionInput)="filtrarAcciones($event)"
-                 (ionClear)="borradoFiltroTexto($event)"></ion-searchbar>
+
   <!--Valor de contadorTags = {{contadorTags}}-->
   <div padding id="etiquetas" *ngIf="contadorTags > 0">
     <ion-chip *ngFor="let tag of tags" #elem [attr.id]="tag.id">
@@ -38,7 +43,7 @@
   </div>
 
   <div *ngIf="!filtrado">
-    <ion-card *ngFor="let accion of acciones">
+    <ion-card *ngFor="let accion of acciones" >
       <ion-card-header>Acción {{accion.numero}}</ion-card-header>
       <ion-card-content (click)="accionSeleccionada(accion)">
         <p [innerHtml]="accion.descripcion" #descripcionAccion></p>
@@ -59,6 +64,35 @@
         </ion-col>
       </ion-row>
     </ion-card>
+    <!---->
+    <!--<h3>Listado de Acciones Programáticas:</h3>-->
+    <!--<ion-list [virtualScroll]="acciones" approxItemHeight="100px" bufferRatio="4" [virtualTrackBy]="itentificarAccion">-->
+    <!--<div *virtualItem = "let accion">-->
+    <!--<ion-card>-->
+    <!--<ion-card-header>Acción {{accion.numero}}</ion-card-header>-->
+    <!--<ion-card-content (click)="accionSeleccionada(accion)">-->
+    <!--<p [innerHtml]="accion.descripcion" #descripcionAccion></p>-->
+    <!--</ion-card-content>-->
+    <!--<ion-row no-padding>-->
+    <!--<ion-col>-->
+    <!--<button ion-button clear small color="danger" icon-start (click)="accionSeleccionada(accion)">-->
+    <!--<ion-icon name='more'></ion-icon>-->
+    <!--Ver Más-->
+    <!--</button>-->
+    <!--</ion-col>-->
+    <!--<ion-col text-right-->
+    <!--(click)="compartirAccion(descripcionAccion.innerText,accion.numero,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">-->
+    <!--<button ion-button clear small color="danger" icon-start>-->
+    <!--<ion-icon name='share'></ion-icon>-->
+    <!--Compartir-->
+    <!--</button>-->
+    <!--</ion-col>-->
+    <!--</ion-row>-->
+    <!--</ion-card>-->
+    <!--</div>-->
+    <!--</ion-list>-->
+
+
   </div>
 
 
