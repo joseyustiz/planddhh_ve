@@ -29,8 +29,8 @@
   <div padding id="etiquetas" *ngIf="contadorTags > 0">
     <ion-chip *ngFor="let tag of tags" #elem [attr.id]="tag.id">
       <ion-label>{{tag.nombre}}</ion-label>
-      <button ion-button clear color="light" (click)="borrarFiltro(elem,tag.slug)">
-        <ion-icon name="close-circle"></ion-icon>
+      <button ion-button clear (click)="borrarFiltro(elem,tag.slug)">        
+         <ion-icon ios="ios-close" md="md-close"></ion-icon>
       </button>
     </ion-chip>
   </div>
@@ -43,15 +43,15 @@
       </ion-card-content>
       <ion-row no-padding>
         <ion-col>
-          <button ion-button clear small color="danger" icon-start (click)="accionSeleccionada(accion)">
-            <ion-icon name='more'></ion-icon>
+          <button ion-button clear small color="gris" icon-start (click)="accionSeleccionada(accion)">
+            <ion-icon ios="ios-more" md="md-more"></ion-icon>
             Ver Más
           </button>
         </ion-col>
         <ion-col text-right
                  (click)="compartirAccion(descripcionAccion.innerText,accion.numero,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
-          <button ion-button clear small color="danger" icon-start>
-            <ion-icon name='share'></ion-icon>
+          <button ion-button clear small color="gris" icon-start>
+            <ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
             Compartir
           </button>
         </ion-col>
@@ -68,15 +68,15 @@
       </ion-card-content>
       <ion-row no-padding>
         <ion-col>
-          <button ion-button clear small color="danger" icon-start (click)="accionSeleccionada(accion)">
-            <ion-icon name='more'></ion-icon>
+          <button ion-button clear small color="gris" icon-start (click)="accionSeleccionada(accion)">
+            <ion-icon ios="ios-more" md="md-more"></ion-icon>
             Ver Más
           </button>
         </ion-col>
         <ion-col text-right
                  (click)="compartirAccion(descripcionAccion.innerText,accion.numero,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
-          <button ion-button clear small color="danger" icon-start>
-            <ion-icon name='share'></ion-icon>
+          <button ion-button clear small color="gris" icon-start>
+            <ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
             Compartir
           </button>
         </ion-col>
