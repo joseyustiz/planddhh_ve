@@ -4,17 +4,15 @@
                                                 title="imagen SVG" width="160"/></ion-title>
   </ion-navbar>
 
-  <ion-toolbar class="tabtitle color2">
-    <ion-title>Acciones Programáticas</ion-title>
-  </ion-toolbar>
-  <ion-toolbar>
+  <ion-toolbar class="tabtitle color2">   
+    <ion-title>Acciones Programáticas</ion-title> 
     <ion-buttons end (click)="limpiarFiltros($event)">
       <button ion-button icon-only>
         <!-- Advanced: explicity set the icon for each platform -->
         <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
-
       </button>
     </ion-buttons>
+    
     <ion-buttons end (click)="presentarFiltros($event)">
       <button ion-button icon-only>
         <ion-icon name="funnel"></ion-icon>
