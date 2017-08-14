@@ -117,22 +117,13 @@ $ionicons-font-path: "../assets/fonts";
  .back-button-icon-ios { font-size: 2rem!important;}
   .bar-button-ios {font-size: 1.5rem!important;}
   .back-button .button-inner{color: $color5;}
-  .toolbar-ios ion-title{padding: 0 14px 1px!important;}
-  ion-title.logotop{top: 10px!important;}
-
-  .tabtitle{padding: 0; height: inherit!important;width: inherit!important;}
-  .tabtitle .toolbar-title{font-size: 1.3rem !important; color: #fff !important;  font-weight: normal; padding: 4px 40px 4px 17px;width: inherit!important; height: inherit!important;
-  -webkit-border-top-right-radius: 20px;
-  -moz-border-radius-topright: 20px;
-  border-top-right-radius: 20px;
-  }
-.tabtitle.toolbar-ios ion-title{width: inherit!important; height: inherit!important;}
+  
+ .toolbar-ios ion-title{padding: 0 14px 1px!important; width: inherit!important;height: inherit!important;}
+  ion-title.logotop{top: 10px!important;}  
+ .tabtitle .toolbar-title{font-size: 1.3rem!important;color: #fff!important;font-weight:normal;padding: 8px 40px 8px 17px;}
  .tabtitle.color1 ion-title{background-color: $color1;}
  .tabtitle.color2 ion-title{background-color: $color2;}
  .tabtitle.color3 ion-title{background-color: $color3;}
  .tabtitle.color4 ion-title{background-color: $color4;}
 
-  
-
-
-
+.tabtitle ion-title{width: 70%;-webkit-border-top-right-radius: 50px;-moz-border-radius-topright: 50px;border-top-right-radius: 50px;}
