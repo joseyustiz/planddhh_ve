@@ -7,9 +7,9 @@
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-navigation href="http://192.168.2.119:8100" />
-    <allow-navigation href="http://localhost:8080/*"/>
+    <allow-navigation href="http://localhost:8080/*" />
     <feature name="CDVWKWebViewEngine">
-      <param name="ios-package" value="CDVWKWebViewEngine" />
+        <param name="ios-package" value="CDVWKWebViewEngine" />
     </feature>
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <allow-intent href="http://*/*" />
