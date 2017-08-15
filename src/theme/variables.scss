@@ -33,12 +33,17 @@ $app-direction: ltr;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
-$color1:    #3faa84;
+$color1:  #3faa84;
 $color2:  #72a0d5;
-$color3:     #66cc99;
-$color4:      #a8bdd1;
-$color5:       #586a93;
-$gris:       #a6a8aa;
+$color3:  #66cc99;
+$color4:  #a8bdd1;
+$color5:  #586a93;
+$color6:  #c6313b;
+$color7:  #0AB09A;
+$color8:  #0297B3;
+$color9:  #CD7B28;
+$color10: #922D46;
+$gris:    #a6a8aa;
 
 
 $colors: (
@@ -140,3 +145,20 @@ $ionicons-font-path: "../assets/fonts";
      padding: 0!important; min-height: 0!important;
 }
 .tabtitle ion-title{top: 11px!important;}
+.modeje {position: relative;}
+.coleje1{background-color: $color6!important;}
+.coleje2{background-color: $color7!important;}
+.coleje3{background-color: $color8!important;}
+.coleje4{background-color: $color9!important;}
+.coleje5{background-color: $color10!important;}
+
+.modeje ion-label{white-space:inherit!important;padding: 25px 40px 25px 70px; margin: 0; -webkit-border-top-left-radius: 100px;-moz-border-radius-topleft: 100px;border-top-left-radius: 100px;}
+.coleje1 ion-label{background-color: #900305!important;}
+.coleje2 ion-label{background-color: #007258!important;}
+.coleje3 ion-label{background-color: #005395!important;}
+.coleje4 ion-label{background-color: #a53700!important;}
+.coleje5 ion-label{background-color: #4b040b!important;}
+
+.modeje ion-label p{color: #fff!important;font-weight: 100!important;font-size: 1.2rem;text-align: center;display: block;}
+.item-md.item-block .item-inner, .item-ios.item-block .item-inner{padding-right: 0!important;}
+.modeje ion-avatar[item-left],.modeje ion-thumbnail[item-left],.modeje ion-avatar[item-start],.modeje ion-thumbnail[item-start] {margin: 8px 16px 8px 18px!important;}
