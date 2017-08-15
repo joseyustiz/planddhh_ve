@@ -1,4 +1,26 @@
 page-eje {
-.scroll-content{margin-top: 85px!important;}
+.scroll-content{margin-top: 85px!important;padding-bottom: 75px!important; background-color: #cde5dc;}
 .content-ios .scroll-content{margin-top: 108px!important;}
+.card-md, .card-ios {
+    margin: 5px 0;
+    border-radius: 0;
+    width: 100%;
+    font-size: 1.6rem;
+    background: #90cdd0;
+    box-shadow: none!important;
+}
+.card-header-md,.card-header-ios {
+    font-size: 1.6rem;
+    color: #0085a5;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;    
+}
+.card-header-ios{font-weight: 400;}
+.card-content-md, .card-content-ios {
+    padding: 13px 16px;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    text-align: center;
+}
 }
