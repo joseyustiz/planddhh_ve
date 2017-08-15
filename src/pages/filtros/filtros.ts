@@ -81,7 +81,7 @@ export class FiltrosPage {
   limpiar(): void {
     // this.viewCtrl.dismiss();
   }
-  cerrar(): void {
+  aplicar(): void {
     this.viewCtrl.dismiss({d:this.filtrosSeleccionados,cont:this.contadorFiltros});
   }
   isSeleccionado(slug){
