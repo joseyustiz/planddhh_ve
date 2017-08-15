@@ -679,6 +679,30 @@
       "slug":"inn",
       "tipo":"INSTITUCION",
       "seleccionado":false
+    },
+    {
+      "id":85,
+      "nombre":"Logros",
+      "descripcion":"Logros en DDHH",
+      "slug":"logros",
+      "tipo":"CONSTRUCCION",
+      "seleccionado":false
+    },
+    {
+      "id":86,
+      "nombre":"Construcción",
+      "descripcion":"Construcción del Plan",
+      "slug":"construccion",
+      "tipo":"CONSTRUCCION",
+      "seleccionado":false
+    },
+    {
+      "id":87,
+      "nombre":"Consulta",
+      "descripcion":"Consulta Pública",
+      "slug":"consulta",
+      "tipo":"CONSTRUCCION",
+      "seleccionado":false
     }
   ]
 }
