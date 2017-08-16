@@ -11,6 +11,24 @@
 
   <ion-toolbar class="tabtitle color3">
     <ion-title>Proceso de Construcción</ion-title>
+    <ion-buttons end (click)="limpiarFiltros($event)">
+      <button ion-button icon-only>
+        <!-- Advanced: explicity set the icon for each platform -->
+        <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end (click)="presentarFiltros($event)">
+      <button ion-button icon-only>
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="filtroTexto" placeholder="Escribe para filtrar por texto..."
+                   (ionInput)="filtrarArticulos($event)"
+                   (ionClear)="borradoFiltroTexto($event)">
+    </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
