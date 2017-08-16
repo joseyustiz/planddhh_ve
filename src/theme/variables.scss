@@ -33,10 +33,10 @@ $app-direction: ltr;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
-$color1:  #3faa84;
-$color2:  #72a0d5;
-$color3:  #66cc99;
-$color4:  #a8bdd1;
+$color1:  #009a70;
+$color2:  #3591bb;
+$color3:  #00aa94;
+$color4:  #76acb6;
 $color5:  #586a93;
 $color6:  #c6313b;
 $color7:  #0AB09A;
@@ -134,7 +134,7 @@ $ionicons-font-path: "../assets/fonts";
 .tabtitle ion-title{width: 70%;-webkit-border-top-right-radius: 50px;-moz-border-radius-topright: 50px;border-top-right-radius: 50px;}
 
 .tabtitle.color2 ion-icon:before{color: $color2;}
-.chip-md, .chip-ios{background-color: $color2!important; color: #fff!important;}
+.chip-md, .chip-ios{background-color: $color2!important; margin: 2px!important; color: #fff!important;}
 .button-clear-md-light, .button-clear-ios-light{color: #fff!important;}
 .button-clear-md,.button-clear-ios{color: $gris!important;}
 .ion-md-close:before,.ion-ios-close:before {vertical-align: middle; color: #fff;}
@@ -153,6 +153,7 @@ $ionicons-font-path: "../assets/fonts";
 .coleje5{background-color: $color10!important;}
 
 .modeje ion-label{white-space:inherit!important;padding: 25px 40px 25px 70px; margin: 0; -webkit-border-top-left-radius: 100px;-moz-border-radius-topleft: 100px;border-top-left-radius: 100px;}
+.modeje ion-label.label-md{padding: 25px 25px 0 70px;margin: 0;height: 100%;}
 .coleje1 ion-label{background-color: #900305!important;}
 .coleje2 ion-label{background-color: #007258!important;}
 .coleje3 ion-label{background-color: #005395!important;}
@@ -165,3 +166,5 @@ $ionicons-font-path: "../assets/fonts";
 h1,h2,h3,h4,h5,h6{color: #586b93;}
 h2{font-size: 1.8rem!important;}
 .scroll-content{background-color: #cde5dc!important;}
+#etiquetas, #etiquetas ion-icon{color: $color1;}
+.bar-button-ios ion-icon,.bar-button-md ion-icon{font-size: 2.3rem!important;}
