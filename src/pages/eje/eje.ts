@@ -38,9 +38,9 @@ export class EjePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad EjePage');
   }
-  lineaSeleccionada(linea){
+  lineaSeleccionada(linea,titiloEje){
     this.navCtrl.push(LineaPage, {
-        linea: linea
+        linea: linea, eje:titiloEje
       }
     );
       console.log(linea);
