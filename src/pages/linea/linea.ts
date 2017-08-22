@@ -19,10 +19,12 @@ import {SocialSharing} from '@ionic-native/social-sharing';
 export class LineaPage {
   linea: any;
   acciones: any;
+  tituloEje: string;
 
   constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams,
               private socialSharing: SocialSharing) {
     this.linea = navParams.get("linea");
+    this.tituloEje = navParams.get("eje");
     this.http.get('assets/data/acciones.json')
       .map(res => {
         return res.json().acciones.filter((item) => {

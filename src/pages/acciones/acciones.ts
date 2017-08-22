@@ -11,7 +11,7 @@ import * as _ from "lodash";
   templateUrl: 'acciones.html'
 })
 export class AccionesPage {
-  acciones: any = undefined;
+  acciones: any;
   filtrado: boolean;
   accionesFiltradas: any;
   tags: any; //almacena los tags seleccionado como filtros

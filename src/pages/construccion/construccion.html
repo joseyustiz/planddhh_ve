@@ -11,10 +11,85 @@
 
   <ion-toolbar class="tabtitle color3">
     <ion-title>Proceso de Construcción</ion-title>
+    <ion-buttons end (click)="limpiarFiltros($event)">
+      <button ion-button icon-only>
+        <!-- Advanced: explicity set the icon for each platform -->
+        <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end (click)="presentarFiltros($event)">
+      <button ion-button icon-only>
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="filtroTexto" placeholder="Escribe para filtrar por texto..."
+                   (ionInput)="filtrarArticulos($event)"
+                   (ionClear)="borradoFiltroTexto($event)">
+    </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content padding>
-<p>Pagina construcción</p>
+<ion-content>
+  Valor de contadorTags = {{contadorTags}}
+  <div padding id="etiquetas" *ngIf="contadorTags > 0">
+    <ion-chip *ngFor="let tag of tags" #elem [attr.id]="tag.id">
+      <ion-label>{{tag.nombre}}</ion-label>
+      <button ion-button clear (click)="borrarFiltro(elem,tag.slug)">
+        <ion-icon ios="ios-close" md="md-close"></ion-icon>
+      </button>
+    </ion-chip>
+  </div>
+
+  <div *ngIf="!filtrado">
+    <ion-card *ngFor="let articulo of articulos">
+      <ion-card-header>{{articulo.titulo}}</ion-card-header>
+      <ion-card-content (click)="articuloSeleccionado(articulo)">
+        <p [innerHtml]="articulo.contenido" #contenidoArticulo></p>
+      </ion-card-content>
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="gris" icon-start (click)="articuloSeleccionado(articulo)">
+            <ion-icon ios="ios-more" md="md-more"></ion-icon>
+            Ver Más
+          </button>
+        </ion-col>
+        <ion-col text-right
+                 (click)="compartirArticulo(contenidoArticulo.innerText,articulo.titulo,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
+          <button ion-button clear small color="gris" icon-start>
+            <ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
+            Compartir
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+
+  <div *ngIf="filtrado">
+    <ion-card *ngFor="let articulo of articulosFiltrados">
+      <ion-card-header>{{articulo.titulo}}</ion-card-header>
+      <ion-card-content (click)="articuloSeleccionado(articulo)">
+        <p [innerHtml]="articulo.contenido" #contenidoArticulo></p>
+      </ion-card-content>
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="gris" icon-start (click)="articuloSeleccionado(articulo)">
+            <ion-icon ios="ios-more" md="md-more"></ion-icon>
+            Ver Más
+          </button>
+        </ion-col>
+        <ion-col text-right
+                 (click)="compartirArticulo(contenidoArticulo.innerText,articulo.titulo,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
+          <button ion-button clear small color="gris" icon-start>
+            <ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
+            Compartir
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+
 </ion-content>
