@@ -16,6 +16,21 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content padding>
+  <div id="titulo">
+    <img src={{articulo.imagen}}/>
+    <h2>
+      {{articulo.titulo}}:
+    </h2>
+    <p [innerHtml]="articulo.contenido"></p>
+  </div>
+
+  <div id="etiquetas">
+    <ion-icon name='pricetags'></ion-icon> Etiquetas:
+    <ion-chip *ngFor="let etiqueta of etiquetas">
+      <ion-label> {{etiqueta.nombre}}</ion-label>
+    </ion-chip>
+
+  </div>
 
 </ion-content>
