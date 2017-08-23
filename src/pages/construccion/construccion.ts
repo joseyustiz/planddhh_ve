@@ -78,14 +78,14 @@ export class ConstruccionPage {
         console.log("se metió en solo por texto");
         this.articulosFiltrados = this.articulos
           .filter((item) => {
-            return (item.contenido.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0);
+            return (item.contenido.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0 || item.titulo.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0);
           });
       } else {
         //filtando por texto y tags
         console.log("texto de busqueda: "+this.filtroTexto +" y tags: "+soloTags);
         this.articulosFiltrados = this.articulos
           .filter((item) => {
-            return (item.contenido.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0 &&
+            return ((item.contenido.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0 || item.titulo.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0) &&
             _.intersection(item.filtros,soloTags).length === soloTags.length);
           });
       }
