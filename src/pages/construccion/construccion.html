@@ -45,11 +45,13 @@
   </div>
 
   <div *ngIf="!filtrado">
+
     <ion-card *ngFor="let articulo of articulos">
-      <ion-card-header>{{articulo.titulo}}</ion-card-header>
-      <ion-card-content (click)="articuloSeleccionado(articulo)">
-        <p [innerHtml]="articulo.contenido" #contenidoArticulo></p>
-      </ion-card-content>
+      <img src={{articulo.imagen}} (click)="articuloSeleccionado(articulo)"/>
+      <ion-card-header text-wrap (click)="articuloSeleccionado(articulo)">{{articulo.titulo}}</ion-card-header>
+      <!--<ion-card-content (click)="articuloSeleccionado(articulo)">-->
+      <!--<p [innerHtml]="articulo.contenido" #contenidoArticulo ></p>-->
+      <!--</ion-card-content>-->
       <ion-row no-padding>
         <ion-col>
           <button ion-button clear small color="gris" icon-start (click)="articuloSeleccionado(articulo)">
@@ -70,10 +72,11 @@
 
   <div *ngIf="filtrado">
     <ion-card *ngFor="let articulo of articulosFiltrados">
-      <ion-card-header>{{articulo.titulo}}</ion-card-header>
-      <ion-card-content (click)="articuloSeleccionado(articulo)">
-        <p [innerHtml]="articulo.contenido" #contenidoArticulo></p>
-      </ion-card-content>
+      <img src="{{articulo.imagen}}"/>
+      <ion-card-header text-wrap (click)="articuloSeleccionado(articulo)">{{articulo.titulo}}</ion-card-header>
+      <!--<ion-card-content (click)="articuloSeleccionado(articulo)">-->
+        <!--<p [innerHtml]="articulo.contenido" #contenidoArticulo></p>-->
+      <!--</ion-card-content>-->
       <ion-row no-padding>
         <ion-col>
           <button ion-button clear small color="gris" icon-start (click)="articuloSeleccionado(articulo)">
