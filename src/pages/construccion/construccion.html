@@ -11,18 +11,18 @@
 
   <ion-toolbar class="tabtitle color3">
     <ion-title>Proceso de Construcción</ion-title>
-    <ion-buttons end (click)="limpiarFiltros($event)">
-      <button ion-button icon-only>
-        <!-- Advanced: explicity set the icon for each platform -->
-        <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
-      </button>
-    </ion-buttons>
+    <!--<ion-buttons end (click)="limpiarFiltros($event)">-->
+      <!--<button ion-button icon-only>-->
+        <!--&lt;!&ndash; Advanced: explicity set the icon for each platform &ndash;&gt;-->
+        <!--<ion-icon ios="ios-trash" md="md-trash"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
 
-    <ion-buttons end (click)="presentarFiltros($event)">
-      <button ion-button icon-only>
-        <ion-icon name="funnel"></ion-icon>
-      </button>
-    </ion-buttons>
+    <!--<ion-buttons end (click)="presentarFiltros($event)">-->
+      <!--<button ion-button icon-only>-->
+        <!--<ion-icon name="funnel"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
   </ion-toolbar>
   <ion-toolbar>
     <ion-searchbar [(ngModel)]="filtroTexto" placeholder="Escribe para filtrar por texto..."
@@ -34,15 +34,15 @@
 
 
 <ion-content>
-  Valor de contadorTags = {{contadorTags}}
-  <div padding id="etiquetas" *ngIf="contadorTags > 0">
-    <ion-chip *ngFor="let tag of tags" #elem [attr.id]="tag.id">
-      <ion-label>{{tag.nombre}}</ion-label>
-      <button ion-button clear (click)="borrarFiltro(elem,tag.slug)">
-        <ion-icon ios="ios-close" md="md-close"></ion-icon>
-      </button>
-    </ion-chip>
-  </div>
+  <!--Valor de contadorTags = {{contadorTags}}-->
+  <!--<div padding id="etiquetas" *ngIf="contadorTags > 0">-->
+    <!--<ion-chip *ngFor="let tag of tags" #elem [attr.id]="tag.id">-->
+      <!--<ion-label>{{tag.nombre}}</ion-label>-->
+      <!--<button ion-button clear (click)="borrarFiltro(elem,tag.slug)">-->
+        <!--<ion-icon ios="ios-close" md="md-close"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-chip>-->
+  <!--</div>-->
 
   <div *ngIf="!filtrado">
 
