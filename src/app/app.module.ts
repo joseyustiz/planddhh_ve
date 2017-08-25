@@ -18,6 +18,7 @@ import {InformacionPage} from "../pages/informacion/informacion";
 import {ConstruccionDetallePage} from '../pages/construccion-detalle/construccion-detalle';
 
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -64,6 +65,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     SocialSharing,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
