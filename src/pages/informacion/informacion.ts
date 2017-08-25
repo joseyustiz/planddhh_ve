@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 /**
  * Generated class for the InformacionPage page.
@@ -14,11 +15,15 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class InformacionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private iab: InAppBrowser, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InformacionPage');
   }
-
+  abrirUrlConNavegador(url){
+    console.log("Abrir URL: "+url);
+    const browser = this.iab.create(url,"_system");
+    browser.close();
+  }
 }
