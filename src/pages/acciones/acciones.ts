@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Renderer} from '@angular/core';
 import {NavController, NavParams, ModalController} from 'ionic-angular';
 import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
 import {AccionPage} from '../accion/accion';
@@ -18,7 +18,7 @@ export class AccionesPage {
   contadorTags: any;
   filtroTexto:string;
 
-  constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams,
+  constructor(private renderer:Renderer, private http: Http, public navCtrl: NavController, public navParams: NavParams,
               private socialSharing: SocialSharing, public modalCtrl: ModalController) {
     this.cargarAcciones();
     this.filtrado = false;
@@ -147,4 +147,9 @@ export class AccionesPage {
     return accion.id;
 
   }
+
+  onSearch(event) {
+    this.renderer.invokeElementMethod(event.target, 'blur');
+  }
+
 }
