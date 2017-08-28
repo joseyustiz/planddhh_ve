@@ -3,7 +3,7 @@
     <name>PlanDDHH_ve</name>
     <description>Aplicación móvil del Plan Nacional de Derechos Humanos 2016-2019 de la República Bolivariana de Venezuela.</description>
     <author email="jose.yustiz@gmail.com" href="http://joseyustiz.com/">José Yustiz y Cristobal Cornieles bajo financiamiento del Fondo de Responsabilidad Social de Conatel</author>
-    <content original-src="index.html" src="http://192.168.2.103:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-navigation href="http://192.168.2.119:8100" />
@@ -28,6 +28,7 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
+    <preference name="loadUrlTimeoutValue" value="60000" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
