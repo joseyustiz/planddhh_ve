@@ -13,8 +13,11 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'construccion-indice.html',
 })
 export class ConstruccionIndicePage {
+  prestagna:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.prestagna="antecedentes";
+
   }
 
   ionViewDidLoad() {

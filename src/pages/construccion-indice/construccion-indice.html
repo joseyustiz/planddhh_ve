@@ -5,14 +5,71 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Construccion Indice</ion-title>
+    <ion-title class="logotop text-center"><img src="assets/img/logo-DDHH.svg" class="imgSVG" alt="imagen SVG" title="imagen SVG" width="160" /></ion-title>
   </ion-navbar>
+
+  <ion-toolbar class="tabtitle color2">
+    <ion-title>Construcción del Plan</ion-title>
+  </ion-toolbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="prestagna">
+      <ion-segment-button value="antecedentes">
+        Antecedentes
+      </ion-segment-button>
+      <ion-segment-button value="proceso">
+        Proceso
+      </ion-segment-button>
+      <ion-segment-button value="resultados">
+        Resultados
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <div [ngSwitch]="prestagna">
+
+    <ion-list *ngSwitchCase="'antecedentes'">
+
+      <button class="btnhome" color="primary" block><ion-icon name="book" (click)="logroSeleccionado('ejes')"></ion-icon>Territorio Libre de Analfabetismo</button>
+      <button class="btnhome" color="secondary" ion-button block><ion-icon name="ai-acciones" (click)="logroSeleccionado('acciones')"></ion-icon>Menos Desigualdad</button>
+      <button class="btnhome" color="danger" ion-button block><ion-icon name="ai-proceso" (click)="logroSeleccionado('construccion')"></ion-icon>Reducción de la Pobreza Extrema</button>
+      <button class="btnhome" color="light" ion-button block><ion-icon name="ios-cloud-download" (click)="logroSeleccionado('invitar')"></ion-icon>Disminución de la Subnutrición</button>
+      <button class="btnhome" color="danger" ion-button block><ion-icon name="ai-proceso" (click)="logroSeleccionado('construccion')"></ion-icon>Reducción del Hambre a Cero</button>
+      <button class="btnhome" color="light" ion-button block><ion-icon name="ios-cloud-download" (click)="logroSeleccionado('invitar')"></ion-icon>Consecución de los ODM</button>
+
+    </ion-list>
+
+
+
+    <ion-list *ngSwitchCase="'antecedentes'">
+      <ion-item *ngFor="let filtro of filtrosInstituciones">
+        <ion-label>{{filtro.nombre}}</ion-label>
+        <ion-toggle [checked]="isSeleccionado(filtro.slug)"
+                    (ionChange)="cambioToggle(filtro)"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'proceso'">
+      <ion-item *ngFor="let filtro of filtrosPoblaciones">
+        <ion-label>{{filtro.nombre}}</ion-label>
+        <ion-toggle [checked]="isSeleccionado(filtro.slug)"
+                    (ionChange)="cambioToggle(filtro)">
+        </ion-toggle>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'resultados'">
+      <ion-item *ngFor="let filtro of filtrosDerechos">
+        <ion-label>{{filtro.nombre}}</ion-label>
+        <ion-toggle [checked]="isSeleccionado(filtro.slug)"
+                    (ionChange)="cambioToggle(filtro)"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </div>
 
 </ion-content>
