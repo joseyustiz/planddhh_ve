@@ -25,6 +25,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ArticulosConstruccionProvider } from '../providers/articulos-construccion/articulos-construccion';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     SocialSharing,
     InAppBrowser,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ArticulosConstruccionProvider
   ]
 })
 export class AppModule {}
