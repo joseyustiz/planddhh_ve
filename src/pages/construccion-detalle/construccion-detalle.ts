@@ -15,24 +15,24 @@ import {Http} from '@angular/http'; //Service to handle requests. HTTP calls ret
 })
 export class ConstruccionDetallePage {
   articulo:any;
-  etiquetas:any;
+  //etiquetas:any;
 
 
   constructor(private http: Http,public navCtrl: NavController, public navParams: NavParams) {
     this.articulo=navParams.get("articulo");
-    this.http.get('assets/data/filtros.json')
-      .map(res => {
-        return res.json().filtros.filter((item) => {
-          return this.articulo.filtros.indexOf(item.slug)>=0
-        })
-      })
-      .subscribe(
-        data => {
-          this.etiquetas = data;
-        },
-        err => console.log("error es " + err), // error
-        () => console.log('Lectura de las etiquetas ' + this.etiquetas.toString()) // complete
-      );
+    // this.http.get('assets/data/filtros.json')
+    //   .map(res => {
+    //     return res.json().filtros.filter((item) => {
+    //       return this.articulo.filtros.indexOf(item.slug)>=0
+    //     })
+    //   })
+    //   .subscribe(
+    //     data => {
+    //       this.etiquetas = data;
+    //     },
+    //     err => console.log("error es " + err), // error
+    //     () => console.log('Lectura de las etiquetas ' + this.etiquetas.toString()) // complete
+    //   );
   }
 
   ionViewDidLoad() {
