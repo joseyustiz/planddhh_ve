@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {ArticulosConstruccionProvider} from "../../providers/articulos-construccion/articulos-construccion";
 
 /**
  * Generated class for the ConstruccionIndicePage page.
@@ -14,14 +15,20 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ConstruccionIndicePage {
   prestagna:string;
+  articulos:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.prestagna="antecedentes";
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public construccionService: ArticulosConstruccionProvider) {
+    this.prestagna="ANTECEDENTES";
 
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConstruccionIndicePage');
+    this.construccionService.cargar().then(data => {
+      this.articulos = data;
+    });
   }
 
 }
