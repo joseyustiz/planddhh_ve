@@ -21,8 +21,8 @@ export class ConstruccionPage {
   articulosAntecedentes: any;
   articulosConstruccion: any;
   articulosResultados: any;
-  filtrado: boolean;
-  articulosFiltrados: any;
+  // filtrado: boolean;
+  // articulosFiltrados: any;
   tags: any; //almacena los tags seleccionado como filtros
   contadorTags: any;
   filtroTexto:string;
@@ -33,7 +33,7 @@ export class ConstruccionPage {
   constructor(private http: Http, private socialSharing: SocialSharing,
               public navCtrl: NavController, public navParams: NavParams) {
     this.cargarArticulos();
-    this.filtrado = false;
+    // this.filtrado = false;
     this.contadorTags = 0;
     this.tags = [];
     this.filtroTexto="";
@@ -143,12 +143,12 @@ export class ConstruccionPage {
   //   }
   // }
 
-  borradoFiltroTexto(ev) {
-    if (this.contadorTags===0){
-      this.filtrado = false;
-      console.log('Filtro borrado');
-    }
-  }
+  // borradoFiltroTexto(ev) {
+  //   if (this.contadorTags===0){
+  //     this.filtrado = false;
+  //     console.log('Filtro borrado');
+  //   }
+  // }
 
   // borrarFiltro(el: Element, slug) {
   //   console.log("tags antes de remover =" + this.tags);
@@ -162,12 +162,12 @@ export class ConstruccionPage {
   //   console.log("tags despues de remover =" + this.tags);
   // }
 
-  limpiarFiltros(ev) {
-    this.filtroTexto="";
-    this.tags=[];
-    this.contadorTags=0;
-    this.filtrado=false;
-  }
+  // limpiarFiltros(ev) {
+  //   this.filtroTexto="";
+  //   this.tags=[];
+  //   this.contadorTags=0;
+  //   this.filtrado=false;
+  // }
 
   // presentarFiltros(ev) {
     // let filtrosModal = this.modalCtrl.create(FiltrosPage,
