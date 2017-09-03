@@ -9,10 +9,23 @@
     <ion-title class="logotop text-center"><img src="assets/img/logo-DDHH.svg" class="imgSVG" alt="imagen SVG"
                                                 title="imagen SVG" width="160"/></ion-title>
   </ion-navbar>
-  <ion-navbar class="tabtitle color3">
-    <ion-title>Construcción del Plan</ion-title>
-  </ion-navbar>
-
+  <div [ngSwitch]="articulo.tipo">
+    <div *ngSwitchCase="'ANTECEDENTES'">
+      <ion-navbar class="tabtitle color1">
+        <ion-title>Antecedentes de la Construcción del Plan</ion-title>
+      </ion-navbar>
+    </div>
+    <div *ngSwitchCase="'CONSTRUCCION'">
+      <ion-navbar class="tabtitle color2">
+        <ion-title>Proceso de Construcción del Plan</ion-title>
+      </ion-navbar>
+    </div>
+    <div *ngSwitchCase="'RESULTADOS'">
+      <ion-navbar class="tabtitle color3">
+        <ion-title>Resultados de la Construcción del Plan</ion-title>
+      </ion-navbar>
+    </div>
+  </div>
 </ion-header>
 
 
@@ -26,10 +39,10 @@
   </div>
 
   <!--<div id="etiquetas">-->
-    <!--<ion-icon name='pricetags'></ion-icon> Etiquetas:-->
-    <!--<ion-chip *ngFor="let etiqueta of etiquetas">-->
-      <!--<ion-label> {{etiqueta.nombre}}</ion-label>-->
-    <!--</ion-chip>-->
+  <!--<ion-icon name='pricetags'></ion-icon> Etiquetas:-->
+  <!--<ion-chip *ngFor="let etiqueta of etiquetas">-->
+  <!--<ion-label> {{etiqueta.nombre}}</ion-label>-->
+  <!--</ion-chip>-->
 
   <!--</div>-->
 
