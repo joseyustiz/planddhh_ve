@@ -11,7 +11,7 @@ import * as _ from "lodash";
   templateUrl: 'acciones.html'
 })
 export class AccionesPage {
-  acciones: any;
+  acciones = [];
   filtrado: boolean;
   accionesFiltradas: any;
   tags: any; //almacena los tags seleccionado como filtros
@@ -142,9 +142,9 @@ export class AccionesPage {
     this.contadorTags=0;
     this.filtrado=false;
   }
-  itentificarAccion(accion){
-    console.log("llamada identificarAccion = " + accion.id);
-    return accion.id;
+  itentificarAccion(index, item){
+    console.log("llamada identificarAccion = " , index, item);
+    return item.numero;
 
   }
 
