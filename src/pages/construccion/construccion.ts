@@ -18,12 +18,17 @@ import * as _ from "lodash";
   templateUrl: 'construccion.html',
 })
 export class ConstruccionPage {
-  articulos: any;
+  articulosAntecedentes: any;
+  articulosConstruccion: any;
+  articulosResultados: any;
   filtrado: boolean;
   articulosFiltrados: any;
   tags: any; //almacena los tags seleccionado como filtros
   contadorTags: any;
   filtroTexto:string;
+  prestagna:string;
+  tipos:any= [];
+
 
   constructor(private http: Http, private socialSharing: SocialSharing,
               public navCtrl: NavController, public navParams: NavParams) {
@@ -32,6 +37,9 @@ export class ConstruccionPage {
     this.contadorTags = 0;
     this.tags = [];
     this.filtroTexto="";
+    this.tipos=[{tag:"ANTECEDENTES",titulo:"Antecedentes"}, {tag:"CONSTRUCCION",titulo:"Construcción"}, {tag:"RESULTADOS",titulo:"Resultados"}];
+    this.prestagna=this.tipos[0].tag;
+
   }
 
   ionViewDidLoad() {
@@ -40,14 +48,39 @@ export class ConstruccionPage {
   cargarArticulos() {
     this.http.get('assets/data/construccion.json')
       .map(res => {
-        return res.json().construccion
+        return res.json().construccion.filter((item) =>
+            {return item.tipo.toUpperCase().indexOf("ANTECEDENTES") >= 0;})
       })
       .subscribe(
         data => {
-          this.articulos = data;
+          this.articulosAntecedentes = data;
         },
         err => console.log("error es " + err), // error
-        () => console.log('Lectura de los artículos de construcción completadas ' + this.articulos.toString()) // complete
+        () => console.log('Lectura de los artículos de construcción completadas ' + this.articulosAntecedentes.toString()) // complete
+      );
+    this.http.get('assets/data/construccion.json')
+      .map(res => {
+        return res.json().construccion.filter((item) =>
+        {return item.tipo.toUpperCase().indexOf("CONSTRUCCION") >= 0;})
+      })
+      .subscribe(
+        data => {
+          this.articulosConstruccion= data;
+        },
+        err => console.log("error es " + err), // error
+        () => console.log('Lectura de los artículos de construcción completadas ' + this.articulosConstruccion.toString()) // complete
+      );
+    this.http.get('assets/data/construccion.json')
+      .map(res => {
+        return res.json().construccion.filter((item) =>
+        {return item.tipo.toUpperCase().indexOf("RESULTADOS") >= 0;})
+      })
+      .subscribe(
+        data => {
+          this.articulosResultados= data;
+        },
+        err => console.log("error es " + err), // error
+        () => console.log('Lectura de los artículos de construcción completadas ' + this.articulosResultados.toString()) // complete
       );
   }
 
@@ -69,46 +102,46 @@ export class ConstruccionPage {
 
   }
 
-  filtrarArticulos(ev) {
-    console.log("filtro de texto tiene contenido ='"+this.filtroTexto+"'");
-    var soloTags=this.tags.map((item)=>{return item.slug});
-    if (this.filtroTexto && this.filtroTexto.trim() != '') {
-      if (this.contadorTags === 0) {
-        // filtando solo por texto
-        console.log("se metió en solo por texto");
-        this.articulosFiltrados = this.articulos
-          .filter((item) => {
-            return (item.contenido.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0 || item.titulo.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0);
-          });
-      } else {
-        //filtando por texto y tags
-        console.log("texto de busqueda: "+this.filtroTexto +" y tags: "+soloTags);
-        this.articulosFiltrados = this.articulos
-          .filter((item) => {
-            return ((item.contenido.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0 || item.titulo.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0) &&
-            _.intersection(item.filtros,soloTags).length === soloTags.length);
-          });
-      }
-      this.filtrado = true;
-    }
-    else {
-      if (this.contadorTags === 0) {
-        this.filtrado = false;
-        this.articulosFiltrados=this.articulos;
-        // ningun filtro
-        console.log("se metió por ningun filtro");
-        console.log("Contenido de acciones"+this.articulos);
-      } else {
-        // filtrando por solo filtros
-        console.log("se metió solo filtros");
-        this.articulosFiltrados = this.articulos
-          .filter((item) => {
-            return _.intersection(item.filtros,soloTags).length === soloTags.length;
-          });
-        this.filtrado = true;
-      }
-    }
-  }
+  // filtrarArticulos(ev) {
+  //   console.log("filtro de texto tiene contenido ='"+this.filtroTexto+"'");
+  //   var soloTags=this.tags.map((item)=>{return item.slug});
+  //   if (this.filtroTexto && this.filtroTexto.trim() != '') {
+  //     if (this.contadorTags === 0) {
+  //       // filtando solo por texto
+  //       console.log("se metió en solo por texto");
+  //       this.articulosFiltrados = this.articulos
+  //         .filter((item) => {
+  //           return (item.contenido.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0 || item.titulo.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0);
+  //         });
+  //     } else {
+  //       //filtando por texto y tags
+  //       console.log("texto de busqueda: "+this.filtroTexto +" y tags: "+soloTags);
+  //       this.articulosFiltrados = this.articulos
+  //         .filter((item) => {
+  //           return ((item.contenido.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0 || item.titulo.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0) &&
+  //           _.intersection(item.filtros,soloTags).length === soloTags.length);
+  //         });
+  //     }
+  //     this.filtrado = true;
+  //   }
+  //   else {
+  //     if (this.contadorTags === 0) {
+  //       this.filtrado = false;
+  //       this.articulosFiltrados=this.articulos;
+  //       // ningun filtro
+  //       console.log("se metió por ningun filtro");
+  //       console.log("Contenido de acciones"+this.articulos);
+  //     } else {
+  //       // filtrando por solo filtros
+  //       console.log("se metió solo filtros");
+  //       this.articulosFiltrados = this.articulos
+  //         .filter((item) => {
+  //           return _.intersection(item.filtros,soloTags).length === soloTags.length;
+  //         });
+  //       this.filtrado = true;
+  //     }
+  //   }
+  // }
 
   borradoFiltroTexto(ev) {
     if (this.contadorTags===0){
@@ -117,17 +150,17 @@ export class ConstruccionPage {
     }
   }
 
-  borrarFiltro(el: Element, slug) {
-    console.log("tags antes de remover =" + this.tags);
-
-    el.remove();
-    this.tags=this.tags.filter((x) => {
-      return x.slug === slug ? false : true
-    });
-    this.contadorTags--;
-    this.filtrarArticulos(event);
-    console.log("tags despues de remover =" + this.tags);
-  }
+  // borrarFiltro(el: Element, slug) {
+  //   console.log("tags antes de remover =" + this.tags);
+  //
+  //   el.remove();
+  //   this.tags=this.tags.filter((x) => {
+  //     return x.slug === slug ? false : true
+  //   });
+  //   this.contadorTags--;
+  //   this.filtrarArticulos(event);
+  //   console.log("tags despues de remover =" + this.tags);
+  // }
 
   limpiarFiltros(ev) {
     this.filtroTexto="";
@@ -136,7 +169,7 @@ export class ConstruccionPage {
     this.filtrado=false;
   }
 
-  presentarFiltros(ev) {
+  // presentarFiltros(ev) {
     // let filtrosModal = this.modalCtrl.create(FiltrosPage,
     //   {tags: this.tags, contador: this.contadorTags});
     // filtrosModal.onDidDismiss((data) => {
@@ -149,7 +182,14 @@ export class ConstruccionPage {
     //   }
     // );
     // filtrosModal.present();
-  }
-
+  // }
+  // getByTipo(tipo) {
+  //   console.log("Tipo: "+tipo);
+  //   // return this.articulos.filter((item) => {
+  //   //   return item.tipo.toUpperCase().indexOf(tipo.toUpperCase()) >= 0
+  //   // });
+  //   return this.articulos.filter((item) =>
+  //     {return item.tipo.toUpperCase().indexOf(tipo.toUpperCase()) >= 0;});
+  // }
 
 }

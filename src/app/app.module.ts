@@ -16,6 +16,8 @@ import {LineaPage} from "../pages/linea/linea";
 import {FiltrosPage} from "../pages/filtros/filtros";
 import {InformacionPage} from "../pages/informacion/informacion";
 import {ConstruccionDetallePage} from '../pages/construccion-detalle/construccion-detalle';
+import {ConstruccionIndicePage} from '../pages/construccion-indice/construccion-indice';
+
 
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
@@ -23,6 +25,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ArticulosConstruccionProvider } from '../providers/articulos-construccion/articulos-construccion';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LineaPage,
     FiltrosPage,
     InformacionPage,
-    ConstruccionDetallePage
+    ConstruccionDetallePage,
+    ConstruccionIndicePage
   ],
   imports: [
     BrowserModule,
@@ -59,14 +63,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LineaPage,
     FiltrosPage,
     InformacionPage,
-    ConstruccionDetallePage
+    ConstruccionDetallePage,
+    ConstruccionIndicePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     SocialSharing,
     InAppBrowser,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ArticulosConstruccionProvider
   ]
 })
 export class AppModule {}

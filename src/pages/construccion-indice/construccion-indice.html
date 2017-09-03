@@ -1,0 +1,116 @@
+<!--
+  Generated template for the ConstruccionIndicePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title class="logotop text-center"><img src="assets/img/logo-DDHH.svg" class="imgSVG" alt="imagen SVG" title="imagen SVG" width="160" /></ion-title>
+  </ion-navbar>
+
+  <ion-toolbar class="tabtitle color1">
+    <ion-title>Construcción del Plan</ion-title>
+  </ion-toolbar>
+  <!--<ion-toolbar no-border-top>-->
+    <!--<ion-segment [(ngModel)]="prestagna">-->
+      <!--<ion-segment-button value="antecedentes">-->
+        <!--Antecedentes-->
+      <!--</ion-segment-button>-->
+      <!--<ion-segment-button value="proceso">-->
+        <!--Proceso-->
+      <!--</ion-segment-button>-->
+      <!--<ion-segment-button value="resultados">-->
+        <!--Resultados-->
+      <!--</ion-segment-button>-->
+    <!--</ion-segment>-->
+  <!--</ion-toolbar>-->
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="prestagna">
+      <ion-segment-button value="ANTECEDENTES">
+        Antecedentes
+      </ion-segment-button>
+      <ion-segment-button value="CONSTRUCCION">
+        Proceso
+      </ion-segment-button>
+      <ion-segment-button value="RESULTADOS">
+        Resultados
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content >
+
+  <div [ngSwitch]="prestagna">
+      <div *ngSwitchCase="'ANTECEDENTES'">
+      <ion-card *ngFor="let articulo of construccionService.getByTipo('ANTECEDENTES')">
+        <img src={{articulo.imagen}} (click)="articuloSeleccionado(articulo)"/>
+        <ion-card-header text-wrap (click)="articuloSeleccionado(articulo)">{{articulo.titulo}}</ion-card-header>
+        <ion-row no-padding>
+          <ion-col>
+            <button ion-button clear small color="gris" icon-start (click)="articuloSeleccionado(articulo)">
+              <ion-icon ios="ios-more" md="md-more"></ion-icon>
+              Ver Más
+            </button>
+          </ion-col>
+          <ion-col text-right
+                   (click)="compartirArticulo(contenidoArticulo.innerText,articulo.titulo,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
+            <button ion-button clear small color="gris" icon-start>
+              <ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
+              Compartir
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+      </div>
+
+    <div *ngSwitchCase="'CONSTRUCCION'">
+      <ion-card *ngFor="let articulo of construccionService.getByTipo('CONSTRUCCION')">
+        <img src={{articulo.imagen}} (click)="articuloSeleccionado(articulo)"/>
+        <ion-card-header text-wrap (click)="articuloSeleccionado(articulo)">{{articulo.titulo}}</ion-card-header>
+        <ion-row no-padding>
+          <ion-col>
+            <button ion-button clear small color="gris" icon-start (click)="articuloSeleccionado(articulo)">
+              <ion-icon ios="ios-more" md="md-more"></ion-icon>
+              Ver Más
+            </button>
+          </ion-col>
+          <ion-col text-right
+                   (click)="compartirArticulo(contenidoArticulo.innerText,articulo.titulo,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
+            <button ion-button clear small color="gris" icon-start>
+              <ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
+              Compartir
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+    <div *ngSwitchCase="'RESULTADOS'">
+      <ion-card *ngFor="let articulo of construccionService.getByTipo('RESULTADOS')">
+        <img src={{articulo.imagen}} (click)="articuloSeleccionado(articulo)"/>
+        <ion-card-header text-wrap (click)="articuloSeleccionado(articulo)">{{articulo.titulo}}</ion-card-header>
+        <ion-row no-padding>
+          <ion-col>
+            <button ion-button clear small color="gris" icon-start (click)="articuloSeleccionado(articulo)">
+              <ion-icon ios="ios-more" md="md-more"></ion-icon>
+              Ver Más
+            </button>
+          </ion-col>
+          <ion-col text-right
+                   (click)="compartirArticulo(contenidoArticulo.innerText,articulo.titulo,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
+            <button ion-button clear small color="gris" icon-start>
+              <ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
+              Compartir
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+
+
+  </div>
+
+</ion-content>

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Renderer} from '@angular/core';
 import {NavController, NavParams, ModalController} from 'ionic-angular';
 import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
 import {AccionPage} from '../accion/accion';
@@ -11,14 +11,14 @@ import * as _ from "lodash";
   templateUrl: 'acciones.html'
 })
 export class AccionesPage {
-  acciones: any;
+  acciones = [];
   filtrado: boolean;
   accionesFiltradas: any;
   tags: any; //almacena los tags seleccionado como filtros
   contadorTags: any;
   filtroTexto:string;
 
-  constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams,
+  constructor(private renderer:Renderer, private http: Http, public navCtrl: NavController, public navParams: NavParams,
               private socialSharing: SocialSharing, public modalCtrl: ModalController) {
     this.cargarAcciones();
     this.filtrado = false;
@@ -142,9 +142,14 @@ export class AccionesPage {
     this.contadorTags=0;
     this.filtrado=false;
   }
-  itentificarAccion(accion){
-    console.log("llamada identificarAccion = " + accion.id);
-    return accion.id;
+  itentificarAccion(index, item){
+    console.log("llamada identificarAccion = " , index, item);
+    return item.numero;
 
   }
+
+  onSearch(event) {
+    this.renderer.invokeElementMethod(event.target, 'blur');
+  }
+
 }
