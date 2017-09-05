@@ -6,7 +6,8 @@ import {SocialSharing} from '@ionic-native/social-sharing';
 // import {FiltrosPage} from "../filtros/filtros";
 import 'rxjs/add/operator/debounceTime';
 import { FormControl } from '@angular/forms';
-
+import { Platform } from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import * as _ from "lodash";
 import { IonicPage } from 'ionic-angular';
 @IonicPage()
@@ -28,14 +29,15 @@ export class AccionesPage {
   searchControl: FormControl;
 
   constructor(private renderer:Renderer, private http: Http, public navCtrl: NavController, public navParams: NavParams,
-              private socialSharing: SocialSharing, public modalCtrl: ModalController) {
+              private socialSharing: SocialSharing, public modalCtrl: ModalController,platform: Platform,  ga: GoogleAnalytics) {
     this.filtrado = false;
     this.contadorTags = 0;
     this.tags = [];
     this.filtroTexto="";
     this.searchControl = new FormControl();
     this.spinner=false;
-
+    //Google Analytics
+    platform.ready().then(() => { ga.trackView("Listado de Acciones Programáticas"); });
   }
 
   ionViewDidLoad() {
