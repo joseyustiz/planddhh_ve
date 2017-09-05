@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-
+import { IonicPage } from 'ionic-angular';
+@IonicPage()
 /**
  * Generated class for the InformacionPage page.
  *
