@@ -31,6 +31,9 @@
 
 
 <ion-content>
+  <div *ngIf="spinner" class="spinner-container">
+    <ion-spinner></ion-spinner>
+  </div>
 
   <!--Valor de contadorTags = {{contadorTags}}-->
   <div padding id="etiquetas" *ngIf="contadorTags > 0">
@@ -98,6 +101,7 @@
 
 
   <div *ngIf="filtrado">
+
     <ion-card *ngFor="let accion of accionesFiltradas">
       <ion-card-header>Acción {{accion.numero}}</ion-card-header>
       <ion-card-content (click)="accionSeleccionada(accion)">

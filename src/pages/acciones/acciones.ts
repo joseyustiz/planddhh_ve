@@ -22,6 +22,7 @@ export class AccionesPage {
   tags: any; //almacena los tags seleccionado como filtros
   contadorTags: any;
   filtroTexto:string;
+  spinner:boolean;
 
   searchControl: FormControl;
 
@@ -32,6 +33,7 @@ export class AccionesPage {
     this.tags = [];
     this.filtroTexto="";
     this.searchControl = new FormControl();
+    this.spinner=false;
 
   }
 
@@ -39,15 +41,15 @@ export class AccionesPage {
     this.cargarAcciones();
     this.searchControl.valueChanges.debounceTime(700).subscribe(search => {
       console.log('con espera de 30000');
-      this.filtrado=false;
       this.filtrarAcciones();
-
     });
 
   }
 
   onSearchInput(){
     this.filtrado = true;
+    this.spinner=true;
+
   }
 
     cargarAcciones() {
@@ -124,6 +126,7 @@ export class AccionesPage {
         this.filtrado = true;
       }
     }
+    this.spinner=false;
   }
 
   borradoFiltroTexto(ev) {
