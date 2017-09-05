@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { IonicPage } from 'ionic-angular';
+import { Platform } from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 @IonicPage()
 /**
  * Generated class for the InformacionPage page.
@@ -16,7 +18,9 @@ import { IonicPage } from 'ionic-angular';
 })
 export class InformacionPage {
 
-  constructor(private iab: InAppBrowser, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private iab: InAppBrowser, public navCtrl: NavController, public navParams: NavParams, platform: Platform,  ga: GoogleAnalytics) {
+    platform.ready().then(() => { ga.trackView("Pag. Información"); });
+
   }
 
   ionViewDidLoad() {
