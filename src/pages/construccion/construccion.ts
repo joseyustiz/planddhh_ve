@@ -2,8 +2,10 @@ import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
 import {SocialSharing} from '@ionic-native/social-sharing';
-import {ConstruccionDetallePage} from '../construccion-detalle/construccion-detalle';
-import * as _ from "lodash";
+// import {ConstruccionDetallePage} from '../construccion-detalle/construccion-detalle';
+// import * as _ from "lodash";
+import { IonicPage } from 'ionic-angular';
+@IonicPage()
 
 
 /**
@@ -94,7 +96,7 @@ export class ConstruccionPage {
   }
 
   articuloSeleccionado(articulo) {
-    this.navCtrl.push(ConstruccionDetallePage, {
+    this.navCtrl.push('ConstruccionDetallePage', {
         articulo: articulo
       }
     );
