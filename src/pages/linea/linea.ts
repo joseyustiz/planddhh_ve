@@ -5,6 +5,8 @@ import 'rxjs/add/operator/map'; //Reactive Extensions Library for JavaScript
 // import {AccionPage} from '../accion/accion'; //lazy load
 import {SocialSharing} from '@ionic-native/social-sharing';
 import { IonicPage } from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { Platform } from 'ionic-angular';
 @IonicPage()
 /**
  * Generated class for the LineaPage page.
@@ -23,7 +25,7 @@ export class LineaPage {
   tituloEje: string;
 
   constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams,
-              private socialSharing: SocialSharing) {
+              private socialSharing: SocialSharing, platform: Platform,   ga: GoogleAnalytics) {
     this.linea = navParams.get("linea");
     this.tituloEje = navParams.get("eje");
     this.http.get('assets/data/acciones.json')
@@ -39,6 +41,7 @@ export class LineaPage {
         err => console.log("error es " + err), // error
         () => console.log('Lectura de acciones completadas ' + this.acciones.toString()) // complete
       );
+    platform.ready().then(() => { ga.trackView("Eje "+this.tituloEje+" - "+this.linea.titulo); });
 
   }
 
