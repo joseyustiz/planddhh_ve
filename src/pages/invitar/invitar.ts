@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {SocialSharing} from '@ionic-native/social-sharing';
-
+import { IonicPage } from 'ionic-angular';
+@IonicPage()
 /**
  * Generated class for the InvitarPage page.
  *
