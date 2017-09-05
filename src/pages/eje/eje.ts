@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
 import 'rxjs/add/operator/map'; //Reactive Extensions Library for JavaScript
-import {LineaPage} from '../linea/linea';
-
+// import {LineaPage} from '../linea/linea'; lazy load
+import { IonicPage } from 'ionic-angular';
+@IonicPage()
 /**
  * Generated class for the EjePage page.
  *
@@ -39,7 +40,7 @@ export class EjePage {
     console.log('ionViewDidLoad EjePage');
   }
   lineaSeleccionada(linea,titiloEje){
-    this.navCtrl.push(LineaPage, {
+    this.navCtrl.push('LineaPage', {
         linea: linea, eje:titiloEje
       }
     );
