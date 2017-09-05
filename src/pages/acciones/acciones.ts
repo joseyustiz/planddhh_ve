@@ -1,10 +1,12 @@
 import {Component, Renderer} from '@angular/core';
 import {NavController, NavParams, ModalController} from 'ionic-angular';
 import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
-import {AccionPage} from '../accion/accion';
+//import {AccionPage} from '../accion/accion';//lazy load
 import {SocialSharing} from '@ionic-native/social-sharing';
-import {FiltrosPage} from "../filtros/filtros";
+// import {FiltrosPage} from "../filtros/filtros";
 import * as _ from "lodash";
+import { IonicPage } from 'ionic-angular';
+@IonicPage()
 
 @Component({
   selector: 'page-contact',
@@ -52,7 +54,7 @@ export class AccionesPage {
   }
 
   accionSeleccionada(accion) {
-    this.navCtrl.push(AccionPage, {
+    this.navCtrl.push('AccionPage', {
         accion: accion
       }
     );
@@ -110,7 +112,7 @@ export class AccionesPage {
   }
 
   presentarFiltros(ev) {
-    let filtrosModal = this.modalCtrl.create(FiltrosPage,
+    let filtrosModal = this.modalCtrl.create('FiltrosPage',
                       {tags: this.tags, contador: this.contadorTags});
     filtrosModal.onDidDismiss((data) => {
         if (data) {
