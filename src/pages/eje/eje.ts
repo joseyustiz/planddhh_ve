@@ -4,6 +4,8 @@ import {Http} from '@angular/http'; //Service to handle requests. HTTP calls ret
 import 'rxjs/add/operator/map'; //Reactive Extensions Library for JavaScript
 // import {LineaPage} from '../linea/linea'; lazy load
 import { IonicPage } from 'ionic-angular';
+import { Platform } from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 @IonicPage()
 /**
  * Generated class for the EjePage page.
@@ -19,7 +21,7 @@ import { IonicPage } from 'ionic-angular';
 export class EjePage {
   eje: any;
 
-  constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams, platform: Platform,  ga: GoogleAnalytics) {
     this.http.get('assets/data/ejes.json')
       .map(res => {
         return res.json().ejes.filter((item) => {
@@ -33,6 +35,7 @@ export class EjePage {
         err => console.log("error es " + err), // error
         () => console.log('Lectura de los ejes y lineas completadas ' + this.eje.toString()) // complete
       );
+    platform.ready().then(() => { ga.trackView("Detalle del Eje "+navParams.get('eje')); });
 
   }
 
