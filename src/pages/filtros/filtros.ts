@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {NavController, NavParams,ViewController} from 'ionic-angular';
 import {Http} from '@angular/http';
 import { IonicPage } from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
+
 @IonicPage()
 /**
  * Generated class for the FiltrosPage page.
@@ -22,7 +24,7 @@ export class FiltrosPage {
   filtrosSeleccionados:any;
   contadorFiltros:any;
 
-  constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams,private viewCtrl: ViewController) {
+  constructor(private http: Http, public navCtrl: NavController, public navParams: NavParams,private viewCtrl: ViewController,  private ga: GoogleAnalytics) {
     this.contadorFiltros=navParams.get("contador");
     if(this.contadorFiltros>0)
       this.filtrosSeleccionados=navParams.get("tags");
@@ -83,6 +85,8 @@ export class FiltrosPage {
     // this.viewCtrl.dismiss();
   }
   aplicar(): void {
+    for (let tag of this.filtrosSeleccionados)
+      this.ga.trackEvent("Etiquetas", "Filtros", tag.nombre, 1);
     this.viewCtrl.dismiss({d:this.filtrosSeleccionados,cont:this.contadorFiltros});
   }
   isSeleccionado(slug){
