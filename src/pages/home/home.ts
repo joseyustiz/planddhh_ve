@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {EjesPage} from '../ejes/ejes';
-import { AccionesPage } from '../acciones/acciones';
-import { ConstruccionPage } from '../construccion/construccion';
-import {InvitarPage} from "../invitar/invitar";
+// import {EjesPage} from '../ejes/ejes';
+// import { AccionesPage } from '../acciones/acciones';
+// import { ConstruccionPage } from '../construccion/construccion';
+// import {InvitarPage} from "../invitar/invitar";
 
 
 @Component({
@@ -19,22 +19,22 @@ export class HomePage {
     switch(opcion) {
       case "ejes": {
         console.log(opcion);
-        this.navCtrl.push(EjesPage);
+        this.navCtrl.push('EjesPage');
         break;
       }
       case "acciones":{
         console.log(opcion);
-        this.navCtrl.push(AccionesPage);
+        this.navCtrl.push('AccionesPage');
         break;
       }
       case "construccion":{
         console.log(opcion);
-        this.navCtrl.push(ConstruccionPage);
+        this.navCtrl.push('ConstruccionPage');
         break;
       }
       case "invitar":{
         console.log(opcion);
-        this.navCtrl.push(InvitarPage);
+        this.navCtrl.push('InvitarPage');
         break;
       }
       default:{
