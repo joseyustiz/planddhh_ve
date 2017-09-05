@@ -23,6 +23,7 @@ export class AccionesPage {
   contadorTags: any;
   filtroTexto:string;
   spinner:boolean;
+  numberOfItemsToDisplay:number = 10;
 
   searchControl: FormControl;
 
@@ -65,7 +66,6 @@ export class AccionesPage {
         err => console.log("error es " + err), // error
         // () => console.log('Lectura de acciones completadas ' + this.acciones.toString()) // complete
       );
-
   }
 
   compartirAccion(accion, titulo, archivo, url) {
@@ -178,5 +178,14 @@ export class AccionesPage {
   onSearch(event) {
     this.renderer.invokeElementMethod(event.target, 'blur');
   }
+
+  doInfiniteNoFiltrado(infiniteScroll){
+    setTimeout(() => {
+      if (this.acciones.length > this.numberOfItemsToDisplay)
+        this.numberOfItemsToDisplay += 10; // load 20 more items
+      infiniteScroll.complete();
+    }, 300);
+  }
+
 
 }

@@ -46,7 +46,9 @@
   </div>
 
   <div *ngIf="!filtrado">
-    <ion-card *ngFor="let accion of acciones" >
+    <div *ngFor="let accion of acciones ;  let i=index">
+      <div *ngIf="i< numberOfItemsToDisplay">
+      <ion-card >
       <ion-card-header>Acción {{accion.numero}}</ion-card-header>
       <ion-card-content (click)="accionSeleccionada(accion)">
         <p [innerHtml]="accion.descripcion" #descripcionAccion></p>
@@ -67,6 +69,8 @@
         </ion-col>
       </ion-row>
     </ion-card>
+    </div>
+    </div>
 
     <!--<h3>Listado de Acciones Programáticas:</h3>
     <ion-list [virtualScroll]="acciones"
@@ -96,6 +100,12 @@
       </div>
     </ion-list>-->
 
+    <ion-infinite-scroll (ionInfinite)="doInfiniteNoFiltrado($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles"
+                                   loadingText="Cargando más data...">
+
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 
   </div>
 
