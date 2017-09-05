@@ -25,6 +25,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
+
 import { ArticulosConstruccionProvider } from '../providers/articulos-construccion/articulos-construccion';
 
 @NgModule({
@@ -72,7 +74,8 @@ import { ArticulosConstruccionProvider } from '../providers/articulos-construcci
     SocialSharing,
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ArticulosConstruccionProvider
+    ArticulosConstruccionProvider,
+    GoogleAnalytics
   ]
 })
 export class AppModule {}
