@@ -2,9 +2,10 @@ import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
 import 'rxjs/add/operator/map'; //Reactive Extensions Library for JavaScript
-import {AccionPage} from '../accion/accion';
+// import {AccionPage} from '../accion/accion'; //lazy load
 import {SocialSharing} from '@ionic-native/social-sharing';
-
+import { IonicPage } from 'ionic-angular';
+@IonicPage()
 /**
  * Generated class for the LineaPage page.
  *
@@ -46,7 +47,7 @@ export class LineaPage {
   }
 
   accionSeleccionada(accion) {
-    this.navCtrl.push(AccionPage, {
+    this.navCtrl.push('AccionPage', {
         accion: accion
       }
     );
