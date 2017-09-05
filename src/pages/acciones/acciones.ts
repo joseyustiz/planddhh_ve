@@ -42,6 +42,7 @@ export class AccionesPage {
     this.cargarAcciones();
     this.searchControl.valueChanges.debounceTime(700).subscribe(search => {
       console.log('con espera de 30000');
+      this.spinner=false;
       this.filtrarAcciones();
     });
 
