@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {SocialSharing} from '@ionic-native/social-sharing';
 import { IonicPage } from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { Platform } from 'ionic-angular';
+
 @IonicPage()
 /**
  * Generated class for the InvitarPage page.
@@ -17,7 +20,9 @@ import { IonicPage } from 'ionic-angular';
 export class InvitarPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              private socialSharing: SocialSharing) {
+              private socialSharing: SocialSharing, platform: Platform,  private ga: GoogleAnalytics) {
+    platform.ready().then(() => { ga.trackView("Invitar a Descargar"); });
+
   }
 
   ionViewDidLoad() {
@@ -28,16 +33,19 @@ export class InvitarPage {
       case "pdf": {
         console.log(opcion);
         this.compartirAccion("Descarga PDF del Plan Nacional de DDHH 2016-2019","Invitación a descargar PDF del Plan DDHH",null,"http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf");
+        this.ga.trackEvent("Invitar a Descargar","PDF","Compartir",1);
         break;
       }
       case "app":{
         console.log(opcion);
         this.compartirAccion("Descarga la Aplicación Móvil del Plan Nacional de DDHH 2016-2019","Invitación a descargar Aplicación Móvil del Plan DDHH",null,"http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf");
+        this.ga.trackEvent( "Invitar a Descargar", "Aplicación Móvil","Compartir", 1);
         break;
       }
       case "gaceta":{
         console.log(opcion);
         this.compartirAccion("Descarga Gaceta Oficial del Plan Nacional de DDHH 2016-2019","Invitación a descargar la Gaceta Oficial del Plan DDHH",null,"http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf");
+        this.ga.trackEvent("Invitar a Descargar","Gaceta","Compartir",1);
         break;
       }
       default:{
