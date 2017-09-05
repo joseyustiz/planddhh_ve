@@ -4,18 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { EjesPage } from '../pages/ejes/ejes';
-import { EjePage } from '../pages/eje/eje';
-import { AccionesPage } from '../pages/acciones/acciones';
+// import { EjesPage } from '../pages/ejes/ejes';
+// import { EjePage } from '../pages/eje/eje'; //lazy load
+// import { AccionesPage } from '../pages/acciones/acciones'; //Lazy Load
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { ConstruccionPage } from '../pages/construccion/construccion';
-import {InvitarPage} from "../pages/invitar/invitar";
-import {AccionPage} from "../pages/accion/accion";
-import {LineaPage} from "../pages/linea/linea";
-import {FiltrosPage} from "../pages/filtros/filtros";
-import {InformacionPage} from "../pages/informacion/informacion";
-import {ConstruccionDetallePage} from '../pages/construccion-detalle/construccion-detalle';
+// import { ConstruccionPage } from '../pages/construccion/construccion'; //Lazy load
+//import {InvitarPage} from "../pages/invitar/invitar";//lazy load
+// import {AccionPage} from "../pages/accion/accion"; //lazy load
+// import {LineaPage} from "../pages/linea/linea"; //lazy load
+// import {FiltrosPage} from "../pages/filtros/filtros";//lazy load
+// import {InformacionPage} from "../pages/informacion/informacion";//lazy load
+// import {ConstruccionDetallePage} from '../pages/construccion-detalle/construccion-detalle'; //Lazy load
 import {ConstruccionIndicePage} from '../pages/construccion-indice/construccion-indice';
 
 
@@ -30,18 +30,18 @@ import { ArticulosConstruccionProvider } from '../providers/articulos-construcci
 @NgModule({
   declarations: [
     MyApp,
-    EjesPage,
-    EjePage,
-    AccionesPage,
+    // EjesPage, //Lazy load
+    // EjePage, //lazy load
+    // AccionesPage, //Lazy load
     HomePage,
     TabsPage,
-    ConstruccionPage,
-    InvitarPage,
-    AccionPage,
-    LineaPage,
-    FiltrosPage,
-    InformacionPage,
-    ConstruccionDetallePage,
+    // ConstruccionPage, //Lazy load
+    //InvitarPage, //lazy load
+    // AccionPage, //lazy load
+    // LineaPage,//lazy load
+    // FiltrosPage,//lazy load
+    // InformacionPage,//lazy load
+    // ConstruccionDetallePage, //Lazy load
     ConstruccionIndicePage
   ],
   imports: [
@@ -52,18 +52,18 @@ import { ArticulosConstruccionProvider } from '../providers/articulos-construcci
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    EjesPage,
-    EjePage,
-    AccionesPage,
+    // EjesPage, //Lazy load
+    // EjePage, //lazy load
+    // AccionesPage, //Lazy load
     HomePage,
     TabsPage,
-    ConstruccionPage,
-    InvitarPage,
-    AccionPage,
-    LineaPage,
-    FiltrosPage,
-    InformacionPage,
-    ConstruccionDetallePage,
+    // ConstruccionPage, //Lazy load
+    //InvitarPage, //lazy load
+    // AccionPage,//lazy load
+    // LineaPage,//lazy load
+    // FiltrosPage,//lazy load
+    // InformacionPage,//lazy load
+    // ConstruccionDetallePage, //Lazy Load
     ConstruccionIndicePage
   ],
   providers: [
