@@ -4,6 +4,8 @@ import {Http} from '@angular/http'; //Service to handle requests. HTTP calls ret
 import {SocialSharing} from '@ionic-native/social-sharing';
 // import {ConstruccionDetallePage} from '../construccion-detalle/construccion-detalle';
 // import * as _ from "lodash";
+import { Platform } from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { IonicPage } from 'ionic-angular';
 @IonicPage()
 
@@ -33,7 +35,7 @@ export class ConstruccionPage {
 
 
   constructor(private http: Http, private socialSharing: SocialSharing,
-              public navCtrl: NavController, public navParams: NavParams) {
+              public navCtrl: NavController, public navParams: NavParams,platform: Platform,  ga: GoogleAnalytics) {
     this.cargarArticulos();
     // this.filtrado = false;
     this.contadorTags = 0;
@@ -41,7 +43,8 @@ export class ConstruccionPage {
     this.filtroTexto="";
     this.tipos=[{tag:"ANTECEDENTES",titulo:"Antecedentes"}, {tag:"CONSTRUCCION",titulo:"Construcción"}, {tag:"RESULTADOS",titulo:"Resultados"}];
     this.prestagna=this.tipos[0].tag;
-
+    //Google Analytics
+    platform.ready().then(() => { ga.trackView("Listado de Art. Construccion del Plan"); });
   }
 
   ionViewDidLoad() {
