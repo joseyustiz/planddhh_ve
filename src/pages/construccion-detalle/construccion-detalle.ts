@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
+// import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
+import { IonicPage } from 'ionic-angular';
+@IonicPage()
 
 /**
  * Generated class for the ConstruccionDetallePage page.
@@ -18,7 +20,7 @@ export class ConstruccionDetallePage {
   //etiquetas:any;
 
 
-  constructor(private http: Http,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(/*private http: Http,*/public navCtrl: NavController, public navParams: NavParams) {
     this.articulo=navParams.get("articulo");
     // this.http.get('assets/data/filtros.json')
     //   .map(res => {
