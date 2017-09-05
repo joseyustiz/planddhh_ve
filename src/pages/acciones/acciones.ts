@@ -4,6 +4,9 @@ import {Http} from '@angular/http'; //Service to handle requests. HTTP calls ret
 //import {AccionPage} from '../accion/accion';//lazy load
 import {SocialSharing} from '@ionic-native/social-sharing';
 // import {FiltrosPage} from "../filtros/filtros";
+import 'rxjs/add/operator/debounceTime';
+import { FormControl } from '@angular/forms';
+
 import * as _ from "lodash";
 import { IonicPage } from 'ionic-angular';
 @IonicPage()
@@ -20,16 +23,35 @@ export class AccionesPage {
   contadorTags: any;
   filtroTexto:string;
 
+  searchControl: FormControl;
+
   constructor(private renderer:Renderer, private http: Http, public navCtrl: NavController, public navParams: NavParams,
               private socialSharing: SocialSharing, public modalCtrl: ModalController) {
-    this.cargarAcciones();
     this.filtrado = false;
     this.contadorTags = 0;
     this.tags = [];
     this.filtroTexto="";
+    this.searchControl = new FormControl();
+
   }
 
-  cargarAcciones() {
+  ionViewDidLoad() {
+    this.cargarAcciones();
+    this.searchControl.valueChanges.debounceTime(700).subscribe(search => {
+      console.log('con espera de 30000');
+      this.filtrado=false;
+      this.filtrarAcciones();
+
+    });
+
+  }
+
+  onSearchInput(){
+    this.filtrado = true;
+  }
+
+    cargarAcciones() {
+      console.log('cargando acciones');
     this.http.get('assets/data/acciones.json')
       .map(res => {
         return res.json().acciones
@@ -61,7 +83,7 @@ export class AccionesPage {
     console.log(accion);
   }
 
-  filtrarAcciones(ev) {
+  filtrarAcciones() {
     console.log("filtro de texto tiene contenido ='"+this.filtroTexto+"'");
     var soloTags=this.tags.map((item)=>{return item.slug});
     // var val = ev.target.value;
@@ -118,7 +140,7 @@ export class AccionesPage {
         if (data) {
           this.tags = data.d;
           this.contadorTags = data.cont;
-          this.filtrarAcciones(ev);
+          this.filtrarAcciones();
           console.log("despues de llamar a filtrar acciones = " + this.contadorTags);
         }
       }
@@ -134,7 +156,7 @@ export class AccionesPage {
       return x.slug === slug ? false : true
     });
     this.contadorTags--;
-    this.filtrarAcciones(event);
+    this.filtrarAcciones();
     console.log("tags despues de remover =" + this.tags);
   }
 

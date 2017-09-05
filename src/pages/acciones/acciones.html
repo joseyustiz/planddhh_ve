@@ -21,7 +21,8 @@
   </ion-toolbar>
   <ion-toolbar>
     <ion-searchbar [(ngModel)]="filtroTexto" placeholder="Escribe para filtrar por texto..."
-                   (ionInput)="filtrarAcciones($event)"
+                   [formControl]="searchControl"
+                   (ionInput)="onSearchInput()"
                    (ionClear)="borradoFiltroTexto($event)"
                    (search)="onSearch($event)">
     </ion-searchbar>
