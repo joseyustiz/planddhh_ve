@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {EjePage} from '../eje/eje';
+//import {EjePage} from '../eje/eje'; //lazy load
+import { IonicPage } from 'ionic-angular';
+@IonicPage()
 
 
 @Component({
@@ -13,7 +15,7 @@ export class EjesPage {
 
   itemSeleccionado(ejeN) {
     console.log("eje # "+ ejeN);
-    this.navCtrl.push(EjePage, {
+    this.navCtrl.push('EjePage', {
         eje: ejeN
       }
     );
