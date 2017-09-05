@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
-
+import { IonicPage } from 'ionic-angular';
+@IonicPage()
 /**
  * Generated class for the AccionPage page.
  *
