@@ -29,7 +29,7 @@ export class AccionesPage {
   searchControl: FormControl;
 
   constructor(private renderer:Renderer, private http: Http, public navCtrl: NavController, public navParams: NavParams,
-              private socialSharing: SocialSharing, public modalCtrl: ModalController,platform: Platform,  ga: GoogleAnalytics) {
+              private socialSharing: SocialSharing, public modalCtrl: ModalController,platform: Platform, private ga: GoogleAnalytics) {
     this.filtrado = false;
     this.contadorTags = 0;
     this.tags = [];
@@ -37,7 +37,7 @@ export class AccionesPage {
     this.searchControl = new FormControl();
     this.spinner=false;
     //Google Analytics
-    platform.ready().then(() => { ga.trackView("Listado de Acciones Programáticas"); });
+    platform.ready().then(() => { this.ga.trackView("Listado de Acciones Programáticas"); });
   }
 
   ionViewDidLoad() {
@@ -74,10 +74,12 @@ export class AccionesPage {
   compartirAccion(accion, titulo, archivo, url) {
     this.socialSharing.share(accion, titulo, archivo, url)
       .then(() => {
+        this.ga.trackEvent("Compartir Acción","Acción "+titulo,"Compartir",1);
         console.log("shareSheetShare: Success");
       }).catch(() => {
       console.error("shareSheetShare: failed");
     });
+
   }
 
   accionSeleccionada(accion) {
