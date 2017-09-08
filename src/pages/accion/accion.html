@@ -16,14 +16,16 @@
 </ion-header>
 
 
-<ion-content padding>
-  <div id="descripcion">
+<ion-content>
+  <div class="card-md" id="descripcion">
+    <div padding>
     <h2>
       Descipción:
     </h2>
     <p [innerHtml]="accion.descripcion"></p>
+    </div>
   </div>
-
+<div padding>
   <div id="etiquetas">
       <ion-icon name='pricetags'></ion-icon> Etiquetas:
     <ion-chip *ngFor="let etiqueta of etiquetas">
@@ -31,5 +33,5 @@
     </ion-chip>
 
   </div>
-
+</div>
 </ion-content>

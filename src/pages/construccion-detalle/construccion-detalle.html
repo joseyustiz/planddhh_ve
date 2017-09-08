@@ -8,35 +8,39 @@
   <ion-navbar>
     <ion-title class="logotop text-center"><img src="assets/img/logo-DDHH.svg" class="imgSVG" alt="imagen SVG"
                                                 title="imagen SVG" width="160"/></ion-title>
-  </ion-navbar>
+  </ion-navbar >
   <div [ngSwitch]="articulo.tipo">
     <div *ngSwitchCase="'ANTECEDENTES'">
-      <ion-navbar class="tabtitle color1">
+    <ion-toolbar class="tabtitle colorc1">
         <ion-title>Antecedentes de la Construcción del Plan</ion-title>
-      </ion-navbar>
+      </ion-toolbar>
     </div>
     <div *ngSwitchCase="'CONSTRUCCION'">
-      <ion-navbar class="tabtitle color2">
+      <ion-toolbar class="tabtitle colorc2">
         <ion-title>Proceso de Construcción del Plan</ion-title>
-      </ion-navbar>
+      </ion-toolbar>
     </div>
     <div *ngSwitchCase="'RESULTADOS'">
-      <ion-navbar class="tabtitle color3">
+      <ion-toolbar class="tabtitle colorc3">
         <ion-title>Resultados de la Construcción del Plan</ion-title>
-      </ion-navbar>
+      </ion-toolbar>
     </div>
   </div>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content [id]="articulo.tipo">
+<div class="card-md">
   <div id="titulo">
     <img src={{articulo.imagen}}/>
+    <div padding>
     <h2>
       {{articulo.titulo}}:
     </h2>
     <p [innerHtml]="articulo.contenido"></p>
+    </div>
   </div>
+  
 
   <!--<div id="etiquetas">-->
   <!--<ion-icon name='pricetags'></ion-icon> Etiquetas:-->
@@ -45,5 +49,5 @@
   <!--</ion-chip>-->
 
   <!--</div>-->
-
+</div>
 </ion-content>
