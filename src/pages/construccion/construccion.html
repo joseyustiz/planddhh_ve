@@ -20,14 +20,20 @@
     <!--</ion-searchbar>-->
     <ion-segment [(ngModel)]="prestagna">
       <ion-segment-button value="ANTECEDENTES">
-        Antecedentes
+        ¿Por Qué?
       </ion-segment-button>
-      <ion-segment-button value="CONSTRUCCION">
-        Proceso
+      <ion-segment-button value="PRIMERA">
+        Etapa 1
       </ion-segment-button>
-      <ion-segment-button value="RESULTADOS">
-        Resultados
+      <ion-segment-button value="SEGUNDA">
+        Etapa 2
       </ion-segment-button>
+      <ion-segment-button value="TERCERA">
+        Etapa 3
+      </ion-segment-button>
+      <!--<ion-segment-button value="RESULTADOS">-->
+        <!--Resultas-->
+      <!--</ion-segment-button>-->
     </ion-segment>
 
   </ion-toolbar>
@@ -84,7 +90,7 @@
         </ion-card>
       </div>
 
-      <div *ngSwitchCase="'CONSTRUCCION'">
+      <div *ngSwitchCase="'PRIMERA'">
         <ion-card *ngFor="let articulo of articulosConstruccion">
           <img src={{articulo.imagen}} (click)="articuloSeleccionado(articulo)"/>
           <ion-card-header text-wrap (click)="articuloSeleccionado(articulo)">{{articulo.titulo}}</ion-card-header>
