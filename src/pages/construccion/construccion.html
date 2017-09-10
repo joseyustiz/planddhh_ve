@@ -68,27 +68,27 @@
         </ion-card>
       </div>
 
-      <div *ngSwitchCase="'RESULTADOS'">
-        <ion-card *ngFor="let articulo of articulosResultados">
-          <img src={{articulo.imagen}} (click)="articuloSeleccionado(articulo)"/>
-          <ion-card-header text-wrap (click)="articuloSeleccionado(articulo)">{{articulo.titulo}}</ion-card-header>
-          <ion-row no-padding>
-            <ion-col>
-              <button ion-button clear small color="gris" icon-start (click)="articuloSeleccionado(articulo)">
-                <ion-icon ios="ios-more" md="md-more"></ion-icon>
-                Ver Más
-              </button>
-            </ion-col>
-            <ion-col text-right
-                     (click)="compartirArticulo(contenidoArticulo.innerText,articulo.titulo,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
-              <button ion-button clear small color="gris" icon-start>
-                <ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
-                Compartir
-              </button>
-            </ion-col>
-          </ion-row>
-        </ion-card>
-      </div>
+      <!--<div *ngSwitchCase="'RESULTADOS'">-->
+        <!--<ion-card *ngFor="let articulo of articulosResultados">-->
+          <!--<img src={{articulo.imagen}} (click)="articuloSeleccionado(articulo)"/>-->
+          <!--<ion-card-header text-wrap (click)="articuloSeleccionado(articulo)">{{articulo.titulo}}</ion-card-header>-->
+          <!--<ion-row no-padding>-->
+            <!--<ion-col>-->
+              <!--<button ion-button clear small color="gris" icon-start (click)="articuloSeleccionado(articulo)">-->
+                <!--<ion-icon ios="ios-more" md="md-more"></ion-icon>-->
+                <!--Ver Más-->
+              <!--</button>-->
+            <!--</ion-col>-->
+            <!--<ion-col text-right-->
+                     <!--(click)="compartirArticulo(contenidoArticulo.innerText,articulo.titulo,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">-->
+              <!--<button ion-button clear small color="gris" icon-start>-->
+                <!--<ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>-->
+                <!--Compartir-->
+              <!--</button>-->
+            <!--</ion-col>-->
+          <!--</ion-row>-->
+        <!--</ion-card>-->
+      <!--</div>-->
 
       <div *ngSwitchCase="'PRIMERA'">
         <ion-card *ngFor="let articulo of articulosConstruccion">
@@ -111,7 +111,51 @@
           </ion-row>
         </ion-card>
       </div>
-    </div>
+
+  <div *ngSwitchCase="'SEGUNDA'">
+    <ion-card *ngFor="let articulo of articulosConstruccion">
+      <img src={{articulo.imagen}} (click)="articuloSeleccionado(articulo)"/>
+      <ion-card-header text-wrap (click)="articuloSeleccionado(articulo)">{{articulo.titulo}}</ion-card-header>
+      <p padding [innerHtml]="articulo.contenido"></p>
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="gris" icon-start (click)="articuloSeleccionado(articulo)">
+            <ion-icon ios="ios-more" md="md-more"></ion-icon>
+            Ver Más
+          </button>
+        </ion-col>
+        <ion-col text-right
+                 (click)="compartirArticulo(contenidoArticulo.innerText,articulo.titulo,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
+          <button ion-button clear small color="gris" icon-start>
+            <ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
+            Compartir
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+
+      <div *ngSwitchCase="'TERCERA'">
+    <ion-card *ngFor="let articulo of articulosConstruccion">
+      <img src={{articulo.imagen}} (click)="articuloSeleccionado(articulo)"/>
+      <ion-card-header text-wrap (click)="articuloSeleccionado(articulo)">{{articulo.titulo}}</ion-card-header>
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="gris" icon-start (click)="articuloSeleccionado(articulo)">
+            <ion-icon ios="ios-more" md="md-more"></ion-icon>
+            Ver Más
+          </button>
+        </ion-col>
+        <ion-col text-right
+                 (click)="compartirArticulo(contenidoArticulo.innerText,articulo.titulo,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
+          <button ion-button clear small color="gris" icon-start>
+            <ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
+            Compartir
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
 
   <!--</div>-->
 
@@ -136,5 +180,5 @@
       </ion-row>
     </ion-card>
   </div>-->
-
+</div>
 </ion-content>
