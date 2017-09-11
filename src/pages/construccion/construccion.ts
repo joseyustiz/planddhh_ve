@@ -23,8 +23,9 @@ import { IonicPage } from 'ionic-angular';
 })
 export class ConstruccionPage {
   articulosAntecedentes: any;
-  articulosConstruccion: any;
-  articulosResultados: any;
+  articulosEtapa1: any;
+  articulosEtapa2: any;
+  articulosEtapa3: any;
   // filtrado: boolean;
   // articulosFiltrados: any;
   tags: any; //almacena los tags seleccionado como filtros
@@ -66,26 +67,38 @@ export class ConstruccionPage {
     this.http.get('assets/data/construccion.json')
       .map(res => {
         return res.json().construccion.filter((item) =>
-        {return item.tipo.toUpperCase().indexOf("CONSTRUCCION") >= 0;})
+        {return item.tipo.toUpperCase().indexOf("ETAPA1") >= 0;})
       })
       .subscribe(
         data => {
-          this.articulosConstruccion= data;
+          this.articulosEtapa1= data;
         },
         err => console.log("error es " + err), // error
-        () => console.log('Lectura de los artículos de construcción completadas ' + this.articulosConstruccion.toString()) // complete
+        () => console.log('Lectura de los artículos de construcción completadas ' + this.articulosEtapa1.toString()) // complete
       );
     this.http.get('assets/data/construccion.json')
       .map(res => {
         return res.json().construccion.filter((item) =>
-        {return item.tipo.toUpperCase().indexOf("RESULTADOS") >= 0;})
+        {return item.tipo.toUpperCase().indexOf("ETAPA2") >= 0;})
       })
       .subscribe(
         data => {
-          this.articulosResultados= data;
+          this.articulosEtapa2= data;
         },
         err => console.log("error es " + err), // error
-        () => console.log('Lectura de los artículos de construcción completadas ' + this.articulosResultados.toString()) // complete
+        () => console.log('Lectura de los artículos de construcción completadas ' + this.articulosEtapa2.toString()) // complete
+      );
+    this.http.get('assets/data/construccion.json')
+      .map(res => {
+        return res.json().construccion.filter((item) =>
+        {return item.tipo.toUpperCase().indexOf("ETAPA3") >= 0;})
+      })
+      .subscribe(
+        data => {
+          this.articulosEtapa3= data;
+        },
+        err => console.log("error es " + err), // error
+        () => console.log('Lectura de los artículos de construcción completadas ' + this.articulosEtapa3.toString()) // complete
       );
   }
 
