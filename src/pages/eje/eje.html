@@ -10,18 +10,18 @@
 </ion-header>
 
 
-<ion-content padding *ngFor="let item of eje">
+<ion-content *ngFor="let item of eje">
   <div id="imagen">
     <img src='{{item.imagen}}'/>
   </div>
-  <div id="descripcion">
+  <div id="descripcion" padding>
     <h1>{{item.descripcion}}</h1>
   </div>
-  <div id="objetivo">
+  <div id="objetivo" padding>
     <h2>Objetivo:</h2>
     <p>{{item.objetivo}}</p>
   </div>
-<div id="lineasEstrategicas">
+<div id="lineasEstrategicas" padding>
   <h2>Líneas estratégicas:</h2>
   <ion-card *ngFor="let linea of item.lineasEstrategicas" (click)="lineaSeleccionada(linea,item.numero)">
     <ion-card-header>
