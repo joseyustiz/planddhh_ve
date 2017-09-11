@@ -20,7 +20,7 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
 
-      //Configurar Google Analytic trackID
+      //Configurar Google Analytics trackID
       this.ga.startTrackerWithId("UA-105882371-1");
 
       this.ga.enableUncaughtExceptionReporting(true).then((_success) => {
