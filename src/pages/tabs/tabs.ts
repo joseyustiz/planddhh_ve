@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-
-// import { EjesPage } from '../ejes/ejes'; //lazy load
-// import { AccionesPage } from '../acciones/acciones'; //lazy load
 import { HomePage } from '../home/home';
-// import { ConstruccionPage } from '../construccion/construccion'; //lazy load
-//import { InvitarPage } from '../invitar/invitar';
-// import { InformacionPage } from '../informacion/informacion';
-
 
 @Component({
   templateUrl: 'tabs.html'

@@ -72,34 +72,6 @@
     </div>
     </div>
 
-    <!--<h3>Listado de Acciones Programáticas:</h3>
-    <ion-list [virtualScroll]="acciones"
-              bufferRatio="4">
-      <div *virtualItem="let accion">
-        <ion-card>
-          <ion-card-header>Acción {{accion.numero}}</ion-card-header>
-          <ion-card-content (click)="accionSeleccionada(accion)">
-            <p [innerHtml]="accion.descripcion" #descripcionAccion></p>
-          </ion-card-content>
-          <ion-row no-padding>
-            <ion-col>
-              <button ion-button clear small color="danger" icon-start (click)="accionSeleccionada(accion)">
-                <ion-icon name='more'></ion-icon>
-                Ver Más
-              </button>
-            </ion-col>
-            <ion-col text-right
-                     (click)="compartirAccion(descripcionAccion.innerText,accion.numero,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
-              <button ion-button clear small color="danger" icon-start>
-                <ion-icon name='share'></ion-icon>
-                Compartir
-              </button>
-            </ion-col>
-          </ion-row>
-        </ion-card>
-      </div>
-    </ion-list>-->
-
     <ion-infinite-scroll (ionInfinite)="doInfiniteNoFiltrado($event)">
       <ion-infinite-scroll-content loadingSpinner="bubbles"
                                    loadingText="Cargando más data...">
@@ -134,33 +106,6 @@
       </ion-row>
     </ion-card>
 
-    <!--<h3>Listado de Acciones Programáticas:</h3>
-  <ion-list [virtualScroll]="accionesFiltradas"
-            bufferRatio="4">
-    <div *virtualItem="let accion">
-      <ion-card>
-        <ion-card-header>Acción {{accion.numero}}</ion-card-header>
-        <ion-card-content (click)="accionSeleccionada(accion)">
-          <p [innerHtml]="accion.descripcion" #descripcionAccion></p>
-        </ion-card-content>
-        <ion-row no-padding>
-          <ion-col>
-            <button ion-button clear small color="danger" icon-start (click)="accionSeleccionada(accion)">
-              <ion-icon name='more'></ion-icon>
-              Ver Más
-            </button>
-          </ion-col>
-          <ion-col text-right
-                   (click)="compartirAccion(descripcionAccion.innerText,accion.numero,null,'http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf')">
-            <button ion-button clear small color="danger" icon-start>
-              <ion-icon name='share'></ion-icon>
-              Compartir
-            </button>
-          </ion-col>
-        </ion-row>
-      </ion-card>
-    </div>
-  </ion-list>-->
     </div>
 
 

@@ -1,9 +1,7 @@
 import {Component, Renderer} from '@angular/core';
 import {NavController, NavParams, ModalController} from 'ionic-angular';
 import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
-//import {AccionPage} from '../accion/accion';//lazy load
 import {SocialSharing} from '@ionic-native/social-sharing';
-// import {FiltrosPage} from "../filtros/filtros";
 import 'rxjs/add/operator/debounceTime';
 import { FormControl } from '@angular/forms';
 import { Platform } from 'ionic-angular';

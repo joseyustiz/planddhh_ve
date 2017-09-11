@@ -2,8 +2,6 @@ import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import {Http} from '@angular/http'; //Service to handle requests. HTTP calls returns observable of HTTP Responses (Observable<Response>)
 import {SocialSharing} from '@ionic-native/social-sharing';
-// import {ConstruccionDetallePage} from '../construccion-detalle/construccion-detalle';
-// import * as _ from "lodash";
 import { Platform } from 'ionic-angular';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { IonicPage } from 'ionic-angular';
@@ -26,8 +24,6 @@ export class ConstruccionPage {
   articulosEtapa1: any;
   articulosEtapa2: any;
   articulosEtapa3: any;
-  // filtrado: boolean;
-  // articulosFiltrados: any;
   tags: any; //almacena los tags seleccionado como filtros
   contadorTags: any;
   filtroTexto:string;
@@ -38,7 +34,6 @@ export class ConstruccionPage {
   constructor(private http: Http, private socialSharing: SocialSharing,
               public navCtrl: NavController, public navParams: NavParams,platform: Platform,  ga: GoogleAnalytics) {
     this.cargarArticulos();
-    // this.filtrado = false;
     this.contadorTags = 0;
     this.tags = [];
     this.filtroTexto="";
@@ -119,95 +114,4 @@ export class ConstruccionPage {
     console.log(articulo);
 
   }
-
-  // filtrarArticulos(ev) {
-  //   console.log("filtro de texto tiene contenido ='"+this.filtroTexto+"'");
-  //   var soloTags=this.tags.map((item)=>{return item.slug});
-  //   if (this.filtroTexto && this.filtroTexto.trim() != '') {
-  //     if (this.contadorTags === 0) {
-  //       // filtando solo por texto
-  //       console.log("se metió en solo por texto");
-  //       this.articulosFiltrados = this.articulos
-  //         .filter((item) => {
-  //           return (item.contenido.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0 || item.titulo.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0);
-  //         });
-  //     } else {
-  //       //filtando por texto y tags
-  //       console.log("texto de busqueda: "+this.filtroTexto +" y tags: "+soloTags);
-  //       this.articulosFiltrados = this.articulos
-  //         .filter((item) => {
-  //           return ((item.contenido.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0 || item.titulo.toLowerCase().indexOf(this.filtroTexto.toLowerCase()) >= 0) &&
-  //           _.intersection(item.filtros,soloTags).length === soloTags.length);
-  //         });
-  //     }
-  //     this.filtrado = true;
-  //   }
-  //   else {
-  //     if (this.contadorTags === 0) {
-  //       this.filtrado = false;
-  //       this.articulosFiltrados=this.articulos;
-  //       // ningun filtro
-  //       console.log("se metió por ningun filtro");
-  //       console.log("Contenido de acciones"+this.articulos);
-  //     } else {
-  //       // filtrando por solo filtros
-  //       console.log("se metió solo filtros");
-  //       this.articulosFiltrados = this.articulos
-  //         .filter((item) => {
-  //           return _.intersection(item.filtros,soloTags).length === soloTags.length;
-  //         });
-  //       this.filtrado = true;
-  //     }
-  //   }
-  // }
-
-  // borradoFiltroTexto(ev) {
-  //   if (this.contadorTags===0){
-  //     this.filtrado = false;
-  //     console.log('Filtro borrado');
-  //   }
-  // }
-
-  // borrarFiltro(el: Element, slug) {
-  //   console.log("tags antes de remover =" + this.tags);
-  //
-  //   el.remove();
-  //   this.tags=this.tags.filter((x) => {
-  //     return x.slug === slug ? false : true
-  //   });
-  //   this.contadorTags--;
-  //   this.filtrarArticulos(event);
-  //   console.log("tags despues de remover =" + this.tags);
-  // }
-
-  // limpiarFiltros(ev) {
-  //   this.filtroTexto="";
-  //   this.tags=[];
-  //   this.contadorTags=0;
-  //   this.filtrado=false;
-  // }
-
-  // presentarFiltros(ev) {
-    // let filtrosModal = this.modalCtrl.create(FiltrosPage,
-    //   {tags: this.tags, contador: this.contadorTags});
-    // filtrosModal.onDidDismiss((data) => {
-    //     if (data) {
-    //       this.tags = data.d;
-    //       this.contadorTags = data.cont;
-    //       this.filtrarAcciones(ev);
-    //       console.log("despues de llamar a filtrar acciones = " + this.contadorTags);
-    //     }
-    //   }
-    // );
-    // filtrosModal.present();
-  // }
-  // getByTipo(tipo) {
-  //   console.log("Tipo: "+tipo);
-  //   // return this.articulos.filter((item) => {
-  //   //   return item.tipo.toUpperCase().indexOf(tipo.toUpperCase()) >= 0
-  //   // });
-  //   return this.articulos.filter((item) =>
-  //     {return item.tipo.toUpperCase().indexOf(tipo.toUpperCase()) >= 0;});
-  // }
-
 }

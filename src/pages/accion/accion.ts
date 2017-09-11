@@ -38,9 +38,6 @@ export class AccionPage {
 
     //Google Analytics
     platform.ready().then(() => { ga.trackView("Detalle de Acción "+this.accion.numero); });
-    // this.ga.startTrackerWithId('UA-105882371-1')
-    //   .then(() => {this.ga.trackView("Detalle de Acción "+this.accion.numero);})
-    //   .catch(e => console.log('Error starting GoogleAnalytics', e));
 
   }
 

@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-// import {EjesPage} from '../ejes/ejes';
-// import { AccionesPage } from '../acciones/acciones';
-// import { ConstruccionPage } from '../construccion/construccion';
-// import {InvitarPage} from "../invitar/invitar";
 
 
 @Component({
