@@ -38,13 +38,13 @@ export class InvitarPage {
       }
       case "app":{
         console.log(opcion);
-        this.compartirAccion("Descarga la Aplicación Móvil del Plan Nacional de DDHH 2016-2019","Invitación a descargar Aplicación Móvil del Plan DDHH",null,"http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf");
+        this.compartirAccion("Descarga la Aplicación Móvil del Plan Nacional de DDHH 2016-2019","Invitación a descargar Aplicación Móvil del Plan DDHH",null,"http://consejoderechoshumanos.gob.ve");
         this.ga.trackEvent( "Invitar a Descargar", "Aplicación Móvil","Compartir", 1);
         break;
       }
       case "gaceta":{
         console.log(opcion);
-        this.compartirAccion("Descarga Gaceta Oficial del Plan Nacional de DDHH 2016-2019","Invitación a descargar la Gaceta Oficial del Plan DDHH",null,"http://consejoderechoshumanos.gob.ve/wp-content/uploads/2015/07/plan_Nacional_Derechos_Humanos.pdf");
+        this.compartirAccion("Descarga Gaceta Oficial del Plan Nacional de DDHH 2016-2019","Invitación a descargar la Gaceta Oficial del Plan DDHH",null,"http://consejoderechoshumanos.gob.ve");
         this.ga.trackEvent("Invitar a Descargar","Gaceta","Compartir",1);
         break;
       }
