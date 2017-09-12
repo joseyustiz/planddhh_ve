@@ -41,14 +41,17 @@
   }
 }
 
-@include makeIcon(ai-acciones, '\e900');
-@include makeIcon(ai-ejes, '\e901');
-@include makeIcon(ai-fb, '\e902');
-@include makeIcon(ai-lineasP, '\e903');
-@include makeIcon(ai-lupa, '\e904');
-@include makeIcon(ai-mail, '\e905');
-@include makeIcon(ai-proceso, '\e906');
-@include makeIcon(ai-tw, '\e907');
-@include makeIcon(ai-logo, '\e908');
-@include makeIcon(ai-logo-DDHH, '\e909');
-@include makeIcon(ai-logotipo, '\e90a');
+@include makeIcon(ai-acciones, '\e903');
+@include makeIcon(ai-ejes, '\e904');
+@include makeIcon(ai-fb, '\e905');
+@include makeIcon(ai-lineasP, '\e906');
+@include makeIcon(ai-lupa, '\e907');
+@include makeIcon(ai-mail, '\e908');
+@include makeIcon(ai-proceso, '\e909');
+@include makeIcon(ai-tw, '\e90a');
+@include makeIcon(ai-logo, '\e90b');
+@include makeIcon(ai-logo-DDHH, '\e90c');
+@include makeIcon(ai-logotipo, '\e90d');
+@include makeIcon(ai-app, '\e902');
+@include makeIcon(ai-go, '\e900');
+@include makeIcon(ai-pdf, '\e901');
