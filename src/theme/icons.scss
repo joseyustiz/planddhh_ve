@@ -26,32 +26,35 @@
 }
 
 @mixin makeIcon($arg, $val) {
-  .ai-#{$arg}:before ,
+ 
   .ion-ios-#{$arg}:before ,
-  .ion-ios-#{$arg}-outline:before ,
+  .ion-ios-ai-#{$arg}:before ,
+  .ion-ios-ai-#{$arg}-outline:before ,
+  .ion-ai-#{$arg}:before ,
+  .ion-ai-#{$arg}-outline:before ,
+  .ion-ios-ai-#{$arg}-outline:before ,
   .ion-md-ai-#{$arg}:before ,
-    .ion-md-#{$arg}:before ,
+  .ion-md-#{$arg}:before ,
   .ion-md-ai-#{$arg}-outline:before  {
-    content: $val;
-    font-size: 26px;
-  }
-  .ion-md-#{$arg}-outline:before  {
     content: $val;
     font-size: 26px;
   }
 }
 
-@include makeIcon(ai-acciones, '\e903');
-@include makeIcon(ai-ejes, '\e904');
-@include makeIcon(ai-fb, '\e905');
-@include makeIcon(ai-lineasP, '\e906');
-@include makeIcon(ai-lupa, '\e907');
-@include makeIcon(ai-mail, '\e908');
-@include makeIcon(ai-proceso, '\e909');
-@include makeIcon(ai-tw, '\e90a');
-@include makeIcon(ai-logo, '\e90b');
-@include makeIcon(ai-logo-DDHH, '\e90c');
-@include makeIcon(ai-logotipo, '\e90d');
+@include makeIcon(acciones, '\e903');
+@include makeIcon(ejes, '\e904');
+@include makeIcon(acciones-outline, '\e90e');
+@include makeIcon(ejes-outline, '\e90f');
+@include makeIcon(lineasP, '\e906');
+@include makeIcon(fb, '\e905');
+@include makeIcon(lupa, '\e907');
+@include makeIcon(mail, '\e908');
+@include makeIcon(proceso, '\e909');
+@include makeIcon(proceso-outline, '\e910');
+@include makeIcon(tw, '\e90a');
+@include makeIcon(logo, '\e90b');
+@include makeIcon(logo-DDHH, '\e90c');
+@include makeIcon(logotipo, '\e90d');
 @include makeIcon(ai-app, '\e902');
 @include makeIcon(ai-go, '\e900');
 @include makeIcon(ai-pdf, '\e901');
