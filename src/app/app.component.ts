@@ -21,7 +21,7 @@ export class MyApp {
       splashScreen.hide();
 
       //Configurar Google Analytics trackID
-      this.ga.startTrackerWithId("UA-105882371-1");
+      this.ga.startTrackerWithId("UA-106817305-1");
 
       this.ga.enableUncaughtExceptionReporting(true).then((_success) => {
         console.log("Successful enabling of uncaught exception reporting "+_success)
